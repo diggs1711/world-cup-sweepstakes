@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Cup Sweepstakes 2026</title>
+<style>
+  :root {
+    --bg: #0a0e1a;
+    --card: #131a2e;
+    --card-hover: #1a2540;
+    --border: #1e2d50;
+    --gold: #f0c040;
+    --silver: #a8b4c8;
+    --bronze: #cd7f32;
+    --green: #2ecc71;
+    --red: #e74c3c;
+    --text: #e8ecf4;
+    --text-dim: #7a8ba8;
+    --accent: #3b82f6;
+    --pot-a: #ef4444;
+    --pot-b: #f59e0b;
+    --pot-c: #22c55e;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 16px;
+  }
+  .container { max-width: 1200px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 24px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+  }
+  .header h1 {
+    font-size: 28px;
+    background: linear-gradient(135deg, #f0c040, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+  .header .subtitle {
+    color: var(--text-dim);
+    font-size: 13px;
+    margin-top: 4px;
+  }
+
+  /* Tabs */
+  .tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 20px;
+    background: var(--card);
+    border-radius: 12px;
+    padding: 4px;
+    overflow-x: auto;
+  }
+  .tab {
+    flex: 1;
+    padding: 10px 16px;
+    border: none;
+    background: transparent;
+    color: var(--text-dim);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s;
+    white-space: nowrap;
+    min-width: fit-content;
+  }
+  .tab:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+  .tab.active { color: #fff; background: var(--accent); }
+
+  /* Leaderboard */
+  .leaderboard { display: flex; flex-direction: column; gap: 8px; }
+  .player-row {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .player-row:hover { background: var(--card-hover); transform: translateX(2px); }
+  .player-row.top1 { border-color: var(--gold); box-shadow: 0 0 20px rgba(240,192,64,0.1); }
+  .player-row.top2 { border-color: var(--silver); }
+  .player-row.top3 { border-color: var(--bronze); }
+  .rank {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+  .rank-1 { background: linear-gradient(135deg, #f0c040, #e6a800); color: #1a1a2e; }
+  .rank-2 { background: linear-gradient(135deg, #a8b4c8, #8899b0); color: #1a1a2e; }
+  .rank-3 { background: linear-gradient(135deg, #cd7f32, #b8722d); color: #1a1a2e; }
+  .rank-default { background: rgba(255,255,255,0.06); color: var(--text-dim); }
+  .player-info { flex: 1; min-width: 0; }
+  .player-name {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+  .player-teams {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .team-badge {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  .team-badge.pot-a { background: rgba(239,68,68,0.15); color: #f87171; }
+  .team-badge.pot-b { background: rgba(245,158,11,0.15); color: #fbbf24; }
+  .team-badge.pot-c { background: rgba(34,197,94,0.15); color: #4ade80; }
+  .player-score {
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .score-main {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1;
+  }
+  .score-label {
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-top: 2px;
+  }
+
+  /* Prize section */
+  .prizes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .prize-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+  }
+  .prize-card .place { font-size: 11px; color: var(--text-dim); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+  .prize-card .amount { font-size: 22px; font-weight: 800; margin: 4px 0; }
+  .prize-card.gold .amount { color: var(--gold); }
+  .prize-card.silver .amount { color: var(--silver); }
+  .prize-card.bronze .amount { color: var(--bronze); }
+
+  /* Match entry */
+  .match-form {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .match-form h3 { font-size: 16px; margin-bottom: 16px; }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .form-row select, .form-row input {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    color: var(--text);
+    font-size: 14px;
+    width: 100%;
+  }
+  .form-row select option { background: var(--card); }
+  .form-row .vs { color: var(--text-dim); font-weight: 600; font-size: 13px; padding: 0 4px; }
+  .result-btns {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .result-btn {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+  }
+  .result-btn:hover { border-color: var(--accent); }
+  .result-btn.selected.win { border-color: var(--green); background: rgba(46,204,113,0.1); }
+  .result-btn.selected.draw { border-color: var(--gold); background: rgba(240,192,64,0.1); }
+  .result-btn.selected.loss { border-color: var(--red); background: rgba(231,76,60,0.1); }
+  .btn-primary {
+    width: 100%;
+    padding: 12px;
+    background: var(--accent);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-primary:hover { background: #2563eb; }
+  .btn-danger {
+    padding: 8px 12px;
+    background: rgba(231,76,60,0.15);
+    border: 1px solid rgba(231,76,60,0.3);
+    border-radius: 6px;
+    color: #f87171;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .btn-danger:hover { background: rgba(231,76,60,0.25); }
+
+  /* Matches list */
+  .matches-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .match-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+  }
+  .match-item .teams { flex: 1; }
+  .match-item .score { font-weight: 700; margin: 0 8px; }
+  .match-item .bonus { color: var(--gold); font-size: 11px; }
+
+  /* Detail modal */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 100;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  .modal-overlay.show { display: flex; align-items: flex-start; justify-content: center; padding-top: 40px; }
+  .modal {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+  }
+  .modal-close {
+    position: absolute;
+    top: 12px; right: 12px;
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    font-size: 20px;
+    cursor: pointer;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-close:hover { background: rgba(255,255,255,0.1); }
+  .modal h2 { font-size: 20px; margin-bottom: 4px; }
+  .modal .player-teams { margin-bottom: 16px; }
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .stat-card {
+    background: var(--bg);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+  }
+  .stat-card .val { font-size: 20px; font-weight: 700; }
+  .stat-card .lbl { font-size: 11px; color: var(--text-dim); margin-top: 2px; }
+  .team-breakdown { margin-top: 12px; }
+  .team-stat {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 13px;
+  }
+
+  /* Empty state */
+  .empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-dim);
+  }
+  .empty-state .icon { font-size: 48px; margin-bottom: 12px; }
+  .empty-state h3 { color: var(--text); margin-bottom: 8px; }
+
+  /* Fleek / nice scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+  /* Rules panel */
+  .rules-panel {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .rules-panel h3 { font-size: 15px; margin-bottom: 12px; }
+  .rules-panel .rule-group { margin-bottom: 12px; }
+  .rules-panel .rule-group h4 { color: var(--text-dim); font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .rules-panel .rule { padding: 2px 0; }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .prizes { grid-template-columns: repeat(3, 1fr); }
+    .form-row { grid-template-columns: 1fr; }
+    .form-row .vs { text-align: center; }
+    .player-row { padding: 10px 12px; }
+    .score-main { font-size: 20px; }
+    .header h1 { font-size: 22px; }
+  }
+
+  /* Data management buttons */
+  .data-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+  .data-actions button {
+    padding: 8px 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--card);
+    color: var(--text);
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .data-actions button:hover { background: var(--card-hover); border-color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>🌍 World Cup 2026 Sweepstakes</h1>
+    <div class="subtitle">16 Players · €10 each · €160 Prize Pool</div>
+  </div>
+
+  <div class="prizes">
+    <div class="prize-card gold">
+      <div class="place">1st</div>
+      <div class="amount">€80</div>
+    </div>
+    <div class="prize-card silver">
+      <div class="place">2nd</div>
+      <div class="amount">€50</div>
+    </div>
+    <div class="prize-card bronze">
+      <div class="place">3rd</div>
+      <div class="amount">€30</div>
+    </div>
+  </div>
+
+  <div class="tabs" id="tabs">
+    <button class="tab active" data-tab="leaderboard">🏆 Leaderboard</button>
+    <button class="tab" data-tab="matches">⚽ Add Results</button>
+    <button class="tab" data-tab="rules">📋 Rules</button>
+  </div>
+
+  <!-- LEADERBOARD TAB -->
+  <div class="tab-content" id="tab-leaderboard">
+    <div id="leaderboard"></div>
+    <div class="data-actions">
+      <button onclick="exportData()">📥 Export Data</button>
+      <button onclick="resetAll()">🔄 Reset All Data</button>
+    </div>
+  </div>
+
+  <!-- MATCHES TAB -->
+  <div class="tab-content" id="tab-matches" style="display:none">
+    <div class="match-form">
+      <h3>Add Match Result</h3>
+      <div class="form-row">
+        <select id="match-team1"><option value="">Select home team</option></select>
+        <div class="vs">vs</div>
+        <select id="match-team2"><option value="">Select away team</option></select>
+      </div>
+      <div style="margin-bottom:8px;color:var(--text-dim);font-size:12px;">Select result:</div>
+      <div class="result-btns">
+        <button class="result-btn win" data-result="home" onclick="selectResult(this)">🏠 Home Win</button>
+        <button class="result-btn draw" data-result="draw" onclick="selectResult(this)">🤝 Draw</button>
+        <button class="result-btn loss" data-result="away" onclick="selectResult(this)">✈️ Away Win</button>
+      </div>
+      <div style="margin-bottom:12px;font-size:12px;color:var(--text-dim);" id="selected-result-display">No result selected</div>
+      <button class="btn-primary" onclick="addMatch()">➕ Add Match Result</button>
+    </div>
+    <h3 style="font-size:15px;margin-bottom:10px;">Recent Results</h3>
+    <div id="matches-list"></div>
+  </div>
+
+  <!-- RULES TAB -->
+  <div class="tab-content" id="tab-rules" style="display:none">
+    <div class="rules-panel">
+      <h3>📋 Scoring Rules</h3>
+      <div class="rule-group">
+        <h4>Basic Scoring</h4>
+        <div class="rule">✅ Win = 3 points</div>
+        <div class="rule">🤝 Draw = 1 point</div>
+        <div class="rule">❌ Loss = 0 points</div>
+      </div>
+      <div class="rule-group">
+        <h4>Underdog Bonuses</h4>
+        <div class="rule">⚡ Pot C beats Pot A = +2 bonus</div>
+        <div class="rule">⚡ Pot C draws Pot A = +1 bonus</div>
+        <div class="rule">⚡ Pot B beats Pot A = +1 bonus</div>
+      </div>
+      <div class="rule-group">
+        <h4>Tournament Bonuses</h4>
+        <div class="rule">🏆 Tournament winner = +5 points</div>
+        <div class="rule">🥈 Runner up = +4 points</div>
+        <div class="rule">🏴 England Heartbreak (knock out England on pens) = +3</div>
+        <div class="rule">🇨🇿 Czechia Bounty (knock out Czechia) = +2</div>
+        <div class="rule">🥄 Wooden Spoon (worst team) = +1</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Player Detail Modal -->
+<div class="modal-overlay" id="player-modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h2 id="modal-name"></h2>
+    <div class="player-teams" id="modal-teams"></div>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="val" id="modal-points">0</div><div class="lbl">Total Points</div></div>
+      <div class="stat-card"><div class="val" id="modal-matches">0</div><div class="lbl">Matches Played</div></div>
+      <div class="stat-card"><div class="val" id="modal-wins">0</div><div class="lbl">Wins</div></div>
+      <div class="stat-card"><div class="val" id="modal-draws">0</div><div class="lbl">Draws</div></div>
+    </div>
+    <h3 style="font-size:14px;margin-bottom:8px;">Team Breakdown</h3>
+    <div id="modal-team-stats"></div>
+  </div>
+</div>
+
+<script>
+// ==================== DATA ====================
+const PLAYERS = [
+  { name: "POTB", teams: ["Jordan", "Ecuador", "Uruguay"] },
+  { name: "Digs", teams: ["Cape Verde", "Panama", "Mexico"] },
+  { name: "Sean", teams: ["Czechia", "Norway", "Belgium"] },
+  { name: "Tadhg", teams: ["Haiti", "Iran", "Argentina"] },
+  { name: "Losty", teams: ["Saudi Arabia", "Japan", "Portugal"] },
+  { name: "Cali", teams: ["Tunisia", "Algeria", "France"] },
+  { name: "Dec W", teams: ["Congo", "Paraguay", "Morocco"] },
+  { name: "Dec N", teams: ["Uzbekistan", "Turkey", "England"] },
+  { name: "Smyth", teams: ["Qatar", "Sweden", "Senegal"] },
+  { name: "Stu", teams: ["Bosnia", "Austria", "Colombia"] },
+  { name: "Glen", teams: ["Curacao", "South Korea", "Croatia"] },
+  { name: "Sash", teams: ["New Zealand", "Canada", "Germany"] },
+  { name: "Deano", teams: ["South Africa", "Switzerland", "USA"] },
+  { name: "CMD", teams: ["Ghana", "Ivory Coast", "Spain"] },
+  { name: "Dave W", teams: ["Iraq", "Australia", "Brazil"] },
+  { name: "Cian", teams: ["Scotland", "Egypt", "Netherlands"] }
+];
+
+// Pot assignments (estimated from FIFA rankings context)
+const POT_A = ["Argentina","France","Spain","England","Brazil","Belgium","Netherlands","Portugal","Germany","Croatia","Morocco","USA","Mexico","Uruguay","Japan","Switzerland"];
+const POT_B = ["Colombia","Senegal","Iran","Sweden","Austria","South Korea","Turkey","Ecuador","Egypt","Tunisia","Algeria","Australia","Norway","Serbia","Poland","Ukraine"];
+const POT_C = ["Jordan","Cape Verde","Panama","Czechia","Haiti","Saudi Arabia","Congo","Uzbekistan","Qatar","Bosnia","Curacao","New Zealand","South Africa","Ghana","Iraq","Scotland","Ivory Coast","Canada","Paraguay","Costa Rica","Slovakia","Slovenia","Hungary","Romania","Greece","Peru","Chile","Mali","Cameroon","Burkina Faso","Guinea","Zambia"];
+
+// Build lookup
+const TEAM_POT = {};
+POT_A.forEach(t => TEAM_POT[t] = 'A');
+POT_B.forEach(t => TEAM_POT[t] = 'B');
+// Everything else in Pot C
+PLAYERS.forEach(p => p.teams.forEach(t => {
+  if (!TEAM_POT[t]) TEAM_POT[t] = 'C';
+}));
+
+// ==================== STATE ====================
+let state = loadState();
+
+function defaultState() {
+  return { matches: [], tournamentBonuses: {} };
+}
+function loadState() {
+  try {
+    const saved = localStorage.getItem('wcSweepstakes');
+    if (saved) return JSON.parse(saved);
+  } catch(e) {}
+  return defaultState();
+}
+function saveState() {
+  localStorage.setItem('wcSweepstakes', JSON.stringify(state));
+}
+
+// ==================== SCORING ====================
+function getTeamPot(team) {
+  return TEAM_POT[team] || 'C';
+}
+
+function calcMatchPoints(team, opponent, result) {
+  // result: 'win', 'draw', 'loss' from team's perspective vs opponent
+  let pts = 0;
+  if (result === 'win') pts += 3;
+  else if (result === 'draw') pts += 1;
+  // loss = 0
+
+  const teamPot = getTeamPot(team);
+  const oppPot = getTeamPot(opponent);
+
+  // Underdog bonuses
+  if (result === 'win' && teamPot === 'C' && oppPot === 'A') pts += 2;
+  else if (result === 'draw' && teamPot === 'C' && oppPot === 'A') pts += 1;
+  else if (result === 'win' && teamPot === 'B' && oppPot === 'A') pts += 1;
+
+  return pts;
+}
+
+function getPlayerStats(player) {
+  const stats = { points: 0, wins: 0, draws: 0, losses: 0, matches: 0, teamStats: {} };
+  player.teams.forEach(t => {
+    stats.teamStats[t] = { points: 0, wins: 0, draws: 0, losses: 0, matches: 0, bonuses: [] };
+  });
+
+  state.matches.forEach(m => {
+    const t1 = m.team1, t2 = m.team2;
+    const p1Teams = player.teams.includes(t1);
+    const p2Teams = player.teams.includes(t2);
+    if (!p1Teams && !p2Teams) return;
+
+    if (p1Teams) {
+      const result = m.result === 'home' ? 'win' : m.result === 'away' ? 'loss' : 'draw';
+      const pts = calcMatchPoints(t1, t2, result);
+      const ts = stats.teamStats[t1];
+      ts.points += pts;
+      ts.matches++;
+      if (result === 'win') { ts.wins++; stats.wins++; }
+      else if (result === 'draw') { ts.draws++; stats.draws++; }
+      else { ts.losses++; stats.losses++; }
+      stats.points += pts;
+      stats.matches++;
+
+      // Track underdog bonus for display
+      const bonusMatch = checkUnderdogBonus(t1, t2, result);
+      if (bonusMatch) ts.bonuses.push(bonusMatch.label);
+    }
+    if (p2Teams) {
+      const result = m.result === 'away' ? 'win' : m.result === 'home' ? 'loss' : 'draw';
+      const pts = calcMatchPoints(t2, t1, result);
+      const ts = stats.teamStats[t2];
+      ts.points += pts;
+      ts.matches++;
+      if (result === 'win') { ts.wins++; stats.wins++; }
+      else if (result === 'draw') { ts.draws++; stats.draws++; }
+      else { ts.losses++; stats.losses++; }
+      stats.points += pts;
+      stats.matches++;
+
+      // Track underdog bonus for display
+      const bonusMatch = checkUnderdogBonus(t2, t1, result);
+      if (bonusMatch) ts.bonuses.push(bonusMatch.label);
+    }
+  });
+
+  // Tournament bonuses (stored manually for now)
+  player.teams.forEach(t => {
+    const bonus = state.tournamentBonuses[t];
+    if (bonus) {
+      stats.points += bonus.points;
+      stats.teamStats[t].points += bonus.points;
+      stats.teamStats[t].bonuses.push(bonus.label);
+    }
+  });
+
+  return stats;
+}
+
+function checkUnderdogBonus(team, opponent, result) {
+  const tp = getTeamPot(team), op = getTeamPot(opponent);
+  if (result === 'win' && tp === 'C' && op === 'A') return { pts: 2, label: '⚡ Giant killing' };
+  if (result === 'draw' && tp === 'C' && op === 'A') return { pts: 1, label: '⚡ Brave draw' };
+  if (result === 'win' && tp === 'B' && op === 'A') return { pts: 1, label: '⚡ Upset' };
+  return null;
+}
+
+// ==================== RENDER ====================
+function renderLeaderboard() {
+  const container = document.getElementById('leaderboard');
+
+  const playerStats = PLAYERS.map(p => ({
+    ...p,
+    stats: getPlayerStats(p)
+  }));
+  playerStats.sort((a, b) => b.stats.points - a.stats.points);
+
+  if (playerStats.length === 0 || state.matches.length === 0) {
+    container.innerHTML = `
+      <div class="empty-state">
+        <div class="icon">⚽</div>
+        <h3>No results yet</h3>
+        <p>Add match results to see the leaderboard</p>
+      </div>
+      <div style="display:grid;gap:8px;margin-top:16px;">
+        ${playerStats.map((p, i) => `
+          <div class="player-row" onclick="openModal(${i})">
+            <div class="rank rank-default">${i+1}</div>
+            <div class="player-info">
+              <div class="player-name">${p.name}</div>
+              <div class="player-teams">
+                ${p.teams.map(t => `<span class="team-badge pot-${getTeamPot(t).toLowerCase()}">${t}</span>`).join('')}
+              </div>
+            </div>
+            <div class="player-score">
+              <div class="score-main">0</div>
+              <div class="score-label">pts</div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = playerStats.map((p, i) => {
+    const rankClass = i === 0 ? 'top1' : i === 1 ? 'top2' : i === 2 ? 'top3' : '';
+    const rankNumClass = i === 0 ? 'rank-1' : i === 1 ? 'rank-2' : i === 2 ? 'rank-3' : 'rank-default';
+    return `
+      <div class="player-row ${rankClass}" onclick="openModal(${i})">
+        <div class="rank ${rankNumClass}">${i+1}</div>
+        <div class="player-info">
+          <div class="player-name">${p.name}</div>
+          <div class="player-teams">
+            ${p.teams.map(t => `<span class="team-badge pot-${getTeamPot(t).toLowerCase()}">${t}</span>`).join('')}
+          </div>
+        </div>
+        <div class="player-score">
+          <div class="score-main">${p.stats.points}</div>
+          <div class="score-label">${p.stats.matches} matches</div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function renderMatches() {
+  const container = document.getElementById('matches-list');
+  if (state.matches.length === 0) {
+    container.innerHTML = `<div class="empty-state"><div class="icon">📋</div><h3>No results added yet</h3><p>Use the form above to add match results</p></div>`;
+    return;
+  }
+  container.innerHTML = [...state.matches].reverse().map((m, i) => {
+    const idx = state.matches.length - 1 - i;
+    const resultText = m.result === 'home' ? `${m.team1} won` : m.result === 'away' ? `${m.team2} won` : 'Draw';
+    return `
+      <div class="match-item">
+        <div class="teams">${m.team1} vs ${m.team2} — ${resultText}</div>
+        <button class="btn-danger" onclick="removeMatch(${idx})">✕</button>
+      </div>
+    `;
+  }).join('');
+}
+
+function populateTeamDropdowns() {
+  const allTeams = [...new Set(PLAYERS.flatMap(p => p.teams))];
+  ['match-team1', 'match-team2'].forEach(id => {
+    const sel = document.getElementById(id);
+    sel.innerHTML = `<option value="">Select team</option>`;
+    allTeams.sort().forEach(t => {
+      sel.innerHTML += `<option value="${t}">${t} (Pot ${getTeamPot(t)})</option>`;
+    });
+  });
+}
+
+// ==================== MODAL ====================
+function openModal(playerIndex) {
+  const p = PLAYERS[playerIndex];
+  const stats = getPlayerStats(p);
+  document.getElementById('modal-name').textContent = p.name;
+  document.getElementById('modal-teams').innerHTML = p.teams.map(t =>
+    `<span class="team-badge pot-${getTeamPot(t).toLowerCase()}">${t}</span>`
+  ).join('');
+  document.getElementById('modal-points').textContent = stats.points;
+  document.getElementById('modal-matches').textContent = stats.matches;
+  document.getElementById('modal-wins').textContent = stats.wins;
+  document.getElementById('modal-draws').textContent = stats.draws;
+
+  const breakdown = document.getElementById('modal-team-stats');
+  breakdown.innerHTML = p.teams.map(t => {
+    const ts = stats.teamStats[t] || { points: 0, wins: 0, draws: 0, losses: 0, matches: 0, bonuses: [] };
+    return `
+      <div class="team-stat">
+        <span><span class="team-badge pot-${getTeamPot(t).toLowerCase()}">${t}</span></span>
+        <span><strong>${ts.points} pts</strong> · ${ts.wins}W ${ts.draws}D ${ts.losses}L</span>
+      </div>
+      ${ts.bonuses.length ? `<div style="font-size:11px;color:var(--gold);padding:2px 0 6px 4px;">${ts.bonuses.join(', ')}</div>` : ''}
+    `;
+  }).join('');
+
+  document.getElementById('player-modal').classList.add('show');
+}
+function closeModal() {
+  document.getElementById('player-modal').classList.remove('show');
+}
+document.getElementById('player-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+// ==================== ACTIONS ====================
+let selectedResult = null;
+function selectResult(el) {
+  document.querySelectorAll('.result-btn').forEach(b => b.classList.remove('selected'));
+  el.classList.add('selected');
+  selectedResult = el.dataset.result;
+  const labels = { home: '🏠 Home team wins', draw: '🤝 Draw', away: '✈️ Away team wins' };
+  document.getElementById('selected-result-display').textContent = labels[selectedResult];
+}
+
+function addMatch() {
+  const t1 = document.getElementById('match-team1').value;
+  const t2 = document.getElementById('match-team2').value;
+  if (!t1 || !t2) { alert('Select both teams'); return; }
+  if (t1 === t2) { alert('Cannot pick same team'); return; }
+  if (!selectedResult) { alert('Select a result'); return; }
+
+  // Check duplicate
+  const dup = state.matches.some(m => (m.team1 === t1 && m.team2 === t2) || (m.team1 === t2 && m.team2 === t1));
+  if (dup) { alert('Match already recorded'); return; }
+
+  state.matches.push({ team1: t1, team2: t2, result: selectedResult });
+  saveState();
+  renderAll();
+  // Reset form
+  document.getElementById('match-team1').value = '';
+  document.getElementById('match-team2').value = '';
+  selectedResult = null;
+  document.querySelectorAll('.result-btn').forEach(b => b.classList.remove('selected'));
+  document.getElementById('selected-result-display').textContent = 'No result selected';
+}
+
+function removeMatch(idx) {
+  state.matches.splice(idx, 1);
+  saveState();
+  renderAll();
+}
+
+function resetAll() {
+  if (!confirm('Reset all match data? This cannot be undone.')) return;
+  state = defaultState();
+  saveState();
+  renderAll();
+}
+
+function exportData() {
+  const data = {
+    players: PLAYERS,
+    teamPots: TEAM_POT,
+    matches: state.matches,
+    tournamentBonuses: state.tournamentBonuses,
+    exported: new Date().toISOString()
+  };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'world-cup-sweepstakes.json';
+  a.click();
+}
+
+// ==================== TOURNAMENT BONUSES UI ====================
+function renderTournamentBonuses() {
+  // Simple: show in the match form area
+  const container = document.querySelector('.match-form');
+  // We'll keep this minimal for now - can be expanded later
+}
+
+// ==================== TABS ====================
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', function() {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(tc => tc.style.display = 'none');
+    this.classList.add('active');
+    document.getElementById('tab-' + this.dataset.tab).style.display = 'block';
+  });
+});
+
+function renderAll() {
+  renderLeaderboard();
+  renderMatches();
+}
+
+// ==================== INIT ====================
+populateTeamDropdowns();
+renderAll();
+
+// Handle keyboard escape for modal
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+</script>
+</body>
+</html>
