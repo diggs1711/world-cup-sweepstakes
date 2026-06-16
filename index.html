@@ -644,7 +644,7 @@ function renderLeaderboard() {
       </div>
       <div style="display:grid;gap:8px;margin-top:16px;">
         ${playerStats.map((p, i) => `
-          <div class="player-row" onclick="openModal(${i})">
+          <div class="player-row" onclick="openModalByName('${p.name}')">
             <div class="rank rank-default">${i+1}</div>
             <div class="player-info">
               <div class="player-name">${p.name}</div>
@@ -667,7 +667,7 @@ function renderLeaderboard() {
     const rankClass = i === 0 ? 'top1' : i === 1 ? 'top2' : i === 2 ? 'top3' : '';
     const rankNumClass = i === 0 ? 'rank-1' : i === 1 ? 'rank-2' : i === 2 ? 'rank-3' : 'rank-default';
     return `
-      <div class="player-row ${rankClass}" onclick="openModal(${i})">
+      <div class="player-row ${rankClass}" onclick="openModalByName('${p.name}')">
         <div class="rank ${rankNumClass}">${i+1}</div>
         <div class="player-info">
           <div class="player-name">${p.name}</div>
@@ -714,8 +714,9 @@ function populateTeamDropdowns() {
 }
 
 // ==================== MODAL ====================
-function openModal(playerIndex) {
-  const p = PLAYERS[playerIndex];
+function openModalByName(name) {
+  const p = PLAYERS.find(pl => pl.name === name);
+  if (!p) return;
   const stats = getPlayerStats(p);
   document.getElementById('modal-name').textContent = p.name;
   document.getElementById('modal-teams').innerHTML = p.teams.map(t =>
