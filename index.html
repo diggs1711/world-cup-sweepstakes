@@ -831,6 +831,40 @@ function renderAll() {
 
 // ==================== INIT ====================
 populateTeamDropdowns();
+
+// Try to load live scores from GitHub (scores.json auto-pushed by cron)
+const GITHUB_RAW = 'https://raw.githubusercontent.com/diggs1711/world-cup-sweepstakes/main/scores.json';
+
+fetch(GITHUB_RAW)
+  .then(r => r.json())
+  .then(liveData => {
+    if (liveData && liveData.matches && liveData.matches.length > 0) {
+      // Auto-populate matches from live data
+      liveData.matches.forEach(m => {
+        const dup = state.matches.some(ex => 
+          (ex.team1 === m.team1 && ex.team2 === m.team2) || 
+          (ex.team1 === m.team2 && ex.team2 === m.team1)
+        );
+        if (!dup) {
+          state.matches.push({ team1: m.team1, team2: m.team2, result: m.result });
+        }
+      });
+      saveState();
+      renderAll();
+
+      // Show live indicator
+      const header = document.querySelector('.header .subtitle');
+      if (header) {
+        const liveCount = liveData.matches.length;
+        header.innerHTML += ` · <span style="color:var(--green)">● LIVE</span> ${liveCount} matches`;
+      }
+    }
+  })
+  .catch(() => {
+    // No live data, manual mode works fine
+    console.log('Manual mode — add results yourself');
+  });
+
 renderAll();
 
 // Handle keyboard escape for modal
