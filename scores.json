@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "16 Jun 2026, 21:00",
+  "lastUpdated": "16 Jun 2026, 22:00",
   "players": [
     {
       "name": "Digs",
@@ -55,67 +55,6 @@
         }
       ],
       "rank": 1
-    },
-    {
-      "name": "Smyth",
-      "total": 5,
-      "teams": [
-        {
-          "name": "Qatar",
-          "pot": "C",
-          "points": 1,
-          "wins": 0,
-          "draws": 1,
-          "losses": 0,
-          "matches": [
-            {
-              "opponent": "Switzerland",
-              "result": "draw",
-              "goals_for": 1,
-              "goals_against": 1,
-              "date": "2026-06-13"
-            }
-          ],
-          "bonuses": []
-        },
-        {
-          "name": "Sweden",
-          "pot": "B",
-          "points": 3,
-          "wins": 1,
-          "draws": 0,
-          "losses": 0,
-          "matches": [
-            {
-              "opponent": "Tunisia",
-              "result": "win",
-              "goals_for": 5,
-              "goals_against": 1,
-              "date": "2026-06-15"
-            }
-          ],
-          "bonuses": []
-        },
-        {
-          "name": "Senegal",
-          "pot": "A",
-          "points": 1,
-          "wins": 0,
-          "draws": 1,
-          "losses": 0,
-          "matches": [
-            {
-              "opponent": "France",
-              "result": "draw",
-              "goals_for": 0,
-              "goals_against": 0,
-              "date": "2026-06-16"
-            }
-          ],
-          "bonuses": []
-        }
-      ],
-      "rank": 2
     },
     {
       "name": "Sash",
@@ -176,7 +115,7 @@
           "bonuses": []
         }
       ],
-      "rank": 3
+      "rank": 2
     },
     {
       "name": "Cian",
@@ -232,6 +171,67 @@
               "goals_for": 2,
               "goals_against": 2,
               "date": "2026-06-14"
+            }
+          ],
+          "bonuses": []
+        }
+      ],
+      "rank": 3
+    },
+    {
+      "name": "Smyth",
+      "total": 4,
+      "teams": [
+        {
+          "name": "Qatar",
+          "pot": "C",
+          "points": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "matches": [
+            {
+              "opponent": "Switzerland",
+              "result": "draw",
+              "goals_for": 1,
+              "goals_against": 1,
+              "date": "2026-06-13"
+            }
+          ],
+          "bonuses": []
+        },
+        {
+          "name": "Sweden",
+          "pot": "B",
+          "points": 3,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0,
+          "matches": [
+            {
+              "opponent": "Tunisia",
+              "result": "win",
+              "goals_for": 5,
+              "goals_against": 1,
+              "date": "2026-06-15"
+            }
+          ],
+          "bonuses": []
+        },
+        {
+          "name": "Senegal",
+          "pot": "A",
+          "points": 0,
+          "wins": 0,
+          "draws": 0,
+          "losses": 1,
+          "matches": [
+            {
+              "opponent": "France",
+              "result": "loss",
+              "goals_for": 0,
+              "goals_against": 2,
+              "date": "2026-06-16"
             }
           ],
           "bonuses": []
@@ -462,6 +462,59 @@
       "rank": 8
     },
     {
+      "name": "Cali",
+      "total": 3,
+      "teams": [
+        {
+          "name": "Tunisia",
+          "pot": "C",
+          "points": 0,
+          "wins": 0,
+          "draws": 0,
+          "losses": 1,
+          "matches": [
+            {
+              "opponent": "Sweden",
+              "result": "loss",
+              "goals_for": 1,
+              "goals_against": 5,
+              "date": "2026-06-15"
+            }
+          ],
+          "bonuses": []
+        },
+        {
+          "name": "Algeria",
+          "pot": "B",
+          "points": 0,
+          "wins": 0,
+          "draws": 0,
+          "losses": 0,
+          "matches": [],
+          "bonuses": []
+        },
+        {
+          "name": "France",
+          "pot": "A",
+          "points": 3,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0,
+          "matches": [
+            {
+              "opponent": "Senegal",
+              "result": "win",
+              "goals_for": 2,
+              "goals_against": 0,
+              "date": "2026-06-16"
+            }
+          ],
+          "bonuses": []
+        }
+      ],
+      "rank": 9
+    },
+    {
       "name": "Glen",
       "total": 3,
       "teams": [
@@ -512,7 +565,7 @@
           "bonuses": []
         }
       ],
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "POTB",
@@ -565,7 +618,7 @@
           "bonuses": []
         }
       ],
-      "rank": 10
+      "rank": 11
     },
     {
       "name": "Sean",
@@ -618,7 +671,7 @@
           "bonuses": []
         }
       ],
-      "rank": 11
+      "rank": 12
     },
     {
       "name": "Tadhg",
@@ -668,59 +721,6 @@
           "draws": 0,
           "losses": 0,
           "matches": [],
-          "bonuses": []
-        }
-      ],
-      "rank": 12
-    },
-    {
-      "name": "Cali",
-      "total": 1,
-      "teams": [
-        {
-          "name": "Tunisia",
-          "pot": "C",
-          "points": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 1,
-          "matches": [
-            {
-              "opponent": "Sweden",
-              "result": "loss",
-              "goals_for": 1,
-              "goals_against": 5,
-              "date": "2026-06-15"
-            }
-          ],
-          "bonuses": []
-        },
-        {
-          "name": "Algeria",
-          "pot": "B",
-          "points": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "matches": [],
-          "bonuses": []
-        },
-        {
-          "name": "France",
-          "pot": "A",
-          "points": 1,
-          "wins": 0,
-          "draws": 1,
-          "losses": 0,
-          "matches": [
-            {
-              "opponent": "Senegal",
-              "result": "draw",
-              "goals_for": 0,
-              "goals_against": 0,
-              "date": "2026-06-16"
-            }
-          ],
           "bonuses": []
         }
       ],
@@ -1018,8 +1018,8 @@
     {
       "team1": "France",
       "team2": "Senegal",
-      "result": "draw",
-      "score1": 0,
+      "result": "home",
+      "score1": 2,
       "score2": 0,
       "date": "2026-06-16",
       "group": "GROUP_I"
