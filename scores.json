@@ -1,6 +1,5 @@
 {
-  "lastUpdated": "16 Jun 2026, 19:50",
-  "matchday": "",
+  "lastUpdated": "16 Jun 2026, 19:52",
   "players": [
     {
       "name": "Digs",
@@ -863,7 +862,6 @@
       "score1": 2,
       "score2": 0,
       "date": "2026-06-11",
-      "status": "FINISHED",
       "group": "GROUP_A"
     },
     {
@@ -873,7 +871,6 @@
       "score1": 2,
       "score2": 1,
       "date": "2026-06-12",
-      "status": "FINISHED",
       "group": "GROUP_A"
     },
     {
@@ -883,7 +880,6 @@
       "score1": 1,
       "score2": 1,
       "date": "2026-06-12",
-      "status": "FINISHED",
       "group": "GROUP_B"
     },
     {
@@ -893,7 +889,6 @@
       "score1": 4,
       "score2": 1,
       "date": "2026-06-13",
-      "status": "FINISHED",
       "group": "GROUP_D"
     },
     {
@@ -903,7 +898,6 @@
       "score1": 1,
       "score2": 1,
       "date": "2026-06-13",
-      "status": "FINISHED",
       "group": "GROUP_B"
     },
     {
@@ -913,7 +907,6 @@
       "score1": 1,
       "score2": 1,
       "date": "2026-06-13",
-      "status": "FINISHED",
       "group": "GROUP_C"
     },
     {
@@ -923,7 +916,6 @@
       "score1": 0,
       "score2": 1,
       "date": "2026-06-14",
-      "status": "FINISHED",
       "group": "GROUP_C"
     },
     {
@@ -933,7 +925,6 @@
       "score1": 2,
       "score2": 0,
       "date": "2026-06-14",
-      "status": "FINISHED",
       "group": "GROUP_D"
     },
     {
@@ -943,7 +934,6 @@
       "score1": 7,
       "score2": 1,
       "date": "2026-06-14",
-      "status": "FINISHED",
       "group": "GROUP_E"
     },
     {
@@ -953,7 +943,6 @@
       "score1": 2,
       "score2": 2,
       "date": "2026-06-14",
-      "status": "FINISHED",
       "group": "GROUP_F"
     },
     {
@@ -963,7 +952,6 @@
       "score1": 1,
       "score2": 0,
       "date": "2026-06-14",
-      "status": "FINISHED",
       "group": "GROUP_E"
     },
     {
@@ -973,7 +961,6 @@
       "score1": 5,
       "score2": 1,
       "date": "2026-06-15",
-      "status": "FINISHED",
       "group": "GROUP_F"
     },
     {
@@ -983,7 +970,6 @@
       "score1": 0,
       "score2": 0,
       "date": "2026-06-15",
-      "status": "FINISHED",
       "group": "GROUP_H"
     },
     {
@@ -993,7 +979,6 @@
       "score1": 1,
       "score2": 1,
       "date": "2026-06-15",
-      "status": "FINISHED",
       "group": "GROUP_G"
     },
     {
@@ -1003,7 +988,6 @@
       "score1": 1,
       "score2": 1,
       "date": "2026-06-15",
-      "status": "FINISHED",
       "group": "GROUP_H"
     },
     {
@@ -1013,7 +997,6 @@
       "score1": 2,
       "score2": 2,
       "date": "2026-06-16",
-      "status": "FINISHED",
       "group": "GROUP_G"
     }
   ]
