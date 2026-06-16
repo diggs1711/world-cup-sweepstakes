@@ -5,9 +5,9 @@ from collections import defaultdict
 
 TEAM_MAP = {"Cape Verde Islands": "Cape Verde", "Bosnia-Herzegovina": "Bosnia", "Congo DR": "Congo", "United States": "USA", "Curaçao": "Curacao", "Czech Republic": "Czechia"}
 
-POT_A = ["Argentina","France","Spain","England","Brazil","Belgium","Netherlands","Portugal","Germany","Croatia","Morocco","USA","Mexico","Uruguay","Japan","Switzerland"]
-POT_B = ["Colombia","Senegal","Iran","Sweden","Austria","South Korea","Turkey","Ecuador","Egypt","Tunisia","Algeria","Australia","Norway","Serbia","Poland","Ukraine"]
-POT_C = ["Jordan","Cape Verde","Panama","Czechia","Haiti","Saudi Arabia","Congo","Uzbekistan","Qatar","Bosnia","Curacao","New Zealand","South Africa","Ghana","Iraq","Scotland","Ivory Coast","Canada","Paraguay"]
+POT_A = ["Uruguay","Mexico","Belgium","Argentina","Portugal","France","Morocco","England","Senegal","Colombia","Croatia","Germany","USA","Spain","Brazil","Netherlands"]
+POT_B = ["Ecuador","Panama","Norway","Iran","Japan","Algeria","Paraguay","Turkey","Sweden","Austria","South Korea","Canada","Switzerland","Ivory Coast","Australia","Egypt"]
+POT_C = ["Jordan","Cape Verde","Czechia","Haiti","Saudi Arabia","Tunisia","Congo","Uzbekistan","Qatar","Bosnia","Curacao","New Zealand","South Africa","Ghana","Iraq","Scotland"]
 
 def get_pot(t):
     if t in POT_A: return 'A'
@@ -81,7 +81,9 @@ def run():
     for i, p in enumerate(out):
         p["rank"] = i + 1
 
-    result = {"lastUpdated": data.get('lastUpdated', ''), "players": out, "matches": matches}
+    from datetime import datetime, timezone, timedelta
+    ireland = datetime.now(timezone.utc) + timedelta(hours=1)
+    result = {"lastUpdated": ireland.strftime("%d %b %Y, %H:%M"), "players": out, "matches": matches}
     with open("scores.json", "w") as f:
         json.dump(result, f, indent=2)
     print(f"✅ Saved {len(matches)} matches, {len(out)} players")
