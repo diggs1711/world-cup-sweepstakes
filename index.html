@@ -167,99 +167,6 @@
   .prize-card.silver .amount { color: var(--silver); }
   .prize-card.bronze .amount { color: var(--bronze); }
 
-  /* Match entry */
-  .match-form {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 16px;
-  }
-  .match-form h3 { font-size: 16px; margin-bottom: 16px; }
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 8px;
-    align-items: center;
-    margin-bottom: 12px;
-  }
-  .form-row select, .form-row input {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 10px 12px;
-    color: var(--text);
-    font-size: 14px;
-    width: 100%;
-  }
-  .form-row select option { background: var(--card); }
-  .form-row .vs { color: var(--text-dim); font-weight: 600; font-size: 13px; padding: 0 4px; }
-  .result-btns {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 16px;
-  }
-  .result-btn {
-    flex: 1;
-    padding: 10px;
-    border: 2px solid var(--border);
-    border-radius: 8px;
-    background: transparent;
-    color: var(--text);
-    font-weight: 600;
-    font-size: 13px;
-    cursor: pointer;
-    transition: all 0.2s;
-    text-align: center;
-  }
-  .result-btn:hover { border-color: var(--accent); }
-  .result-btn.selected.win { border-color: var(--green); background: rgba(46,204,113,0.1); }
-  .result-btn.selected.draw { border-color: var(--gold); background: rgba(240,192,64,0.1); }
-  .result-btn.selected.loss { border-color: var(--red); background: rgba(231,76,60,0.1); }
-  .btn-primary {
-    width: 100%;
-    padding: 12px;
-    background: var(--accent);
-    border: none;
-    border-radius: 8px;
-    color: #fff;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .btn-primary:hover { background: #2563eb; }
-  .btn-danger {
-    padding: 8px 12px;
-    background: rgba(231,76,60,0.15);
-    border: 1px solid rgba(231,76,60,0.3);
-    border-radius: 6px;
-    color: #f87171;
-    font-size: 12px;
-    cursor: pointer;
-  }
-  .btn-danger:hover { background: rgba(231,76,60,0.25); }
-
-  /* Matches list */
-  .matches-list {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-  .match-item {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 10px 14px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 13px;
-  }
-  .match-item .teams { flex: 1; }
-  .match-item .score { font-weight: 700; margin: 0 8px; }
-  .match-item .bonus { color: var(--gold); font-size: 11px; }
-
   /* Detail modal */
   .modal-overlay {
     display: none;
@@ -403,7 +310,6 @@
 
   <div class="tabs" id="tabs">
     <button class="tab active" data-tab="leaderboard">🏆 Leaderboard</button>
-    <button class="tab" data-tab="matches">⚽ Add Results</button>
     <button class="tab" data-tab="rules">📋 Rules</button>
   </div>
 
@@ -414,28 +320,6 @@
       <button onclick="exportData()">📥 Export Data</button>
       <button onclick="resetAll()">🔄 Reset All Data</button>
     </div>
-  </div>
-
-  <!-- MATCHES TAB -->
-  <div class="tab-content" id="tab-matches" style="display:none">
-    <div class="match-form">
-      <h3>Add Match Result</h3>
-      <div class="form-row">
-        <select id="match-team1"><option value="">Select home team</option></select>
-        <div class="vs">vs</div>
-        <select id="match-team2"><option value="">Select away team</option></select>
-      </div>
-      <div style="margin-bottom:8px;color:var(--text-dim);font-size:12px;">Select result:</div>
-      <div class="result-btns">
-        <button class="result-btn win" data-result="home" onclick="selectResult(this)">🏠 Home Win</button>
-        <button class="result-btn draw" data-result="draw" onclick="selectResult(this)">🤝 Draw</button>
-        <button class="result-btn loss" data-result="away" onclick="selectResult(this)">✈️ Away Win</button>
-      </div>
-      <div style="margin-bottom:12px;font-size:12px;color:var(--text-dim);" id="selected-result-display">No result selected</div>
-      <button class="btn-primary" onclick="addMatch()">➕ Add Match Result</button>
-    </div>
-    <h3 style="font-size:15px;margin-bottom:10px;">Recent Results</h3>
-    <div id="matches-list"></div>
   </div>
 
   <!-- RULES TAB -->
@@ -684,35 +568,6 @@ function renderLeaderboard() {
   }).join('');
 }
 
-function renderMatches() {
-  const container = document.getElementById('matches-list');
-  if (state.matches.length === 0) {
-    container.innerHTML = `<div class="empty-state"><div class="icon">📋</div><h3>No results added yet</h3><p>Use the form above to add match results</p></div>`;
-    return;
-  }
-  container.innerHTML = [...state.matches].reverse().map((m, i) => {
-    const idx = state.matches.length - 1 - i;
-    const resultText = m.result === 'home' ? `${m.team1} won` : m.result === 'away' ? `${m.team2} won` : 'Draw';
-    return `
-      <div class="match-item">
-        <div class="teams">${m.team1} vs ${m.team2} — ${resultText}</div>
-        <button class="btn-danger" onclick="removeMatch(${idx})">✕</button>
-      </div>
-    `;
-  }).join('');
-}
-
-function populateTeamDropdowns() {
-  const allTeams = [...new Set(PLAYERS.flatMap(p => p.teams))];
-  ['match-team1', 'match-team2'].forEach(id => {
-    const sel = document.getElementById(id);
-    sel.innerHTML = `<option value="">Select team</option>`;
-    allTeams.sort().forEach(t => {
-      sel.innerHTML += `<option value="${t}">${t} (Pot ${getTeamPot(t)})</option>`;
-    });
-  });
-}
-
 // ==================== MODAL ====================
 function openModalByName(name) {
   const p = PLAYERS.find(pl => pl.name === name);
@@ -749,50 +604,6 @@ document.getElementById('player-modal').addEventListener('click', function(e) {
 });
 
 // ==================== ACTIONS ====================
-let selectedResult = null;
-function selectResult(el) {
-  document.querySelectorAll('.result-btn').forEach(b => b.classList.remove('selected'));
-  el.classList.add('selected');
-  selectedResult = el.dataset.result;
-  const labels = { home: '🏠 Home team wins', draw: '🤝 Draw', away: '✈️ Away team wins' };
-  document.getElementById('selected-result-display').textContent = labels[selectedResult];
-}
-
-function addMatch() {
-  const t1 = document.getElementById('match-team1').value;
-  const t2 = document.getElementById('match-team2').value;
-  if (!t1 || !t2) { alert('Select both teams'); return; }
-  if (t1 === t2) { alert('Cannot pick same team'); return; }
-  if (!selectedResult) { alert('Select a result'); return; }
-
-  // Check duplicate
-  const dup = state.matches.some(m => (m.team1 === t1 && m.team2 === t2) || (m.team1 === t2 && m.team2 === t1));
-  if (dup) { alert('Match already recorded'); return; }
-
-  state.matches.push({ team1: t1, team2: t2, result: selectedResult });
-  saveState();
-  renderAll();
-  // Reset form
-  document.getElementById('match-team1').value = '';
-  document.getElementById('match-team2').value = '';
-  selectedResult = null;
-  document.querySelectorAll('.result-btn').forEach(b => b.classList.remove('selected'));
-  document.getElementById('selected-result-display').textContent = 'No result selected';
-}
-
-function removeMatch(idx) {
-  state.matches.splice(idx, 1);
-  saveState();
-  renderAll();
-}
-
-function resetAll() {
-  if (!confirm('Reset all match data? This cannot be undone.')) return;
-  state = defaultState();
-  saveState();
-  renderAll();
-}
-
 function exportData() {
   const data = {
     players: PLAYERS,
@@ -808,13 +619,6 @@ function exportData() {
   a.click();
 }
 
-// ==================== TOURNAMENT BONUSES UI ====================
-function renderTournamentBonuses() {
-  // Simple: show in the match form area
-  const container = document.querySelector('.match-form');
-  // We'll keep this minimal for now - can be expanded later
-}
-
 // ==================== TABS ====================
 document.querySelectorAll('.tab').forEach(tab => {
   tab.addEventListener('click', function() {
@@ -827,11 +631,9 @@ document.querySelectorAll('.tab').forEach(tab => {
 
 function renderAll() {
   renderLeaderboard();
-  renderMatches();
 }
 
 // ==================== INIT ====================
-populateTeamDropdowns();
 
 // Try to load live scores from GitHub (scores.json auto-pushed by cron)
 const GITHUB_RAW = 'https://raw.githubusercontent.com/diggs1711/world-cup-sweepstakes/main/scores.json';
