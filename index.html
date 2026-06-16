@@ -52,6 +52,12 @@
     font-size: 13px;
     margin-top: 4px;
   }
+  .header .last-updated {
+    color: var(--text-dim);
+    font-size: 11px;
+    margin-top: 2px;
+    opacity: 0.7;
+  }
 
   /* Tabs */
   .tabs {
@@ -291,6 +297,7 @@
   <div class="header">
     <h1>🌍 World Cup 2026 Sweepstakes</h1>
     <div class="subtitle">16 Players · €10 each · €160 Prize Pool</div>
+    <div class="last-updated" id="lastUpdated"></div>
   </div>
 
   <div class="prizes">
@@ -654,6 +661,12 @@ fetch(GITHUB_RAW)
       });
       saveState();
       renderAll();
+
+      // Show last updated time
+      const lu = document.getElementById('lastUpdated');
+      if (lu && liveData.lastUpdated) {
+        lu.textContent = 'Last updated: ' + liveData.lastUpdated;
+      }
 
       // Show live indicator
       const header = document.querySelector('.header .subtitle');

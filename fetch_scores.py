@@ -10,6 +10,7 @@ import os
 import urllib.request
 import sys
 from collections import defaultdict
+from datetime import datetime, timezone, timedelta
 
 API_KEY = os.environ.get("FETCH_FOOTBALL_API_KEY", "")
 API_URL = "https://api.football-data.org/v4/competitions/2000/matches"
@@ -169,8 +170,12 @@ def process():
     for i, p in enumerate(output_players):
         p["rank"] = i + 1
 
+    # Irish time (IST = UTC+1 in summer)
+    ireland_now = datetime.now(timezone.utc) + timedelta(hours=1)
+    timestamp = ireland_now.strftime("%d %b %Y, %H:%M")
+
     return {
-        "lastUpdated": data.get('lastUpdated', ''),
+        "lastUpdated": timestamp,
         "matchday": data.get('season', {}).get('currentMatchday', ''),
         "players": output_players,
         "matches": matches
