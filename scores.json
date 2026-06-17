@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "17 Jun 2026, 21:00",
+  "lastUpdated": "17 Jun 2026, 22:00",
   "players": [
     {
       "name": "Digs",
@@ -478,6 +478,67 @@
       "rank": 8
     },
     {
+      "name": "Glen",
+      "total": 4,
+      "teams": [
+        {
+          "name": "Curacao",
+          "pot": "C",
+          "points": 0,
+          "wins": 0,
+          "draws": 0,
+          "losses": 1,
+          "matches": [
+            {
+              "opponent": "Germany",
+              "result": "loss",
+              "goals_for": 1,
+              "goals_against": 7,
+              "date": "2026-06-14"
+            }
+          ],
+          "bonuses": []
+        },
+        {
+          "name": "South Korea",
+          "pot": "B",
+          "points": 3,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0,
+          "matches": [
+            {
+              "opponent": "Czechia",
+              "result": "win",
+              "goals_for": 2,
+              "goals_against": 1,
+              "date": "2026-06-12"
+            }
+          ],
+          "bonuses": []
+        },
+        {
+          "name": "Croatia",
+          "pot": "A",
+          "points": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "matches": [
+            {
+              "opponent": "England",
+              "result": "draw",
+              "goals_for": 2,
+              "goals_against": 2,
+              "date": "2026-06-17"
+            }
+          ],
+          "bonuses": []
+        }
+      ],
+      "rank": 9
+    },
+    {
       "name": "Deano",
       "total": 4,
       "teams": [
@@ -536,7 +597,7 @@
           "bonuses": []
         }
       ],
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "CMD",
@@ -589,7 +650,7 @@
           "bonuses": []
         }
       ],
-      "rank": 10
+      "rank": 11
     },
     {
       "name": "Dave W",
@@ -650,7 +711,7 @@
           "bonuses": []
         }
       ],
-      "rank": 11
+      "rank": 12
     },
     {
       "name": "Cali",
@@ -711,7 +772,7 @@
           "bonuses": []
         }
       ],
-      "rank": 12
+      "rank": 13
     },
     {
       "name": "Dec W",
@@ -771,59 +832,6 @@
               "date": "2026-06-13"
             }
           ],
-          "bonuses": []
-        }
-      ],
-      "rank": 13
-    },
-    {
-      "name": "Glen",
-      "total": 3,
-      "teams": [
-        {
-          "name": "Curacao",
-          "pot": "C",
-          "points": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 1,
-          "matches": [
-            {
-              "opponent": "Germany",
-              "result": "loss",
-              "goals_for": 1,
-              "goals_against": 7,
-              "date": "2026-06-14"
-            }
-          ],
-          "bonuses": []
-        },
-        {
-          "name": "South Korea",
-          "pot": "B",
-          "points": 3,
-          "wins": 1,
-          "draws": 0,
-          "losses": 0,
-          "matches": [
-            {
-              "opponent": "Czechia",
-              "result": "win",
-              "goals_for": 2,
-              "goals_against": 1,
-              "date": "2026-06-12"
-            }
-          ],
-          "bonuses": []
-        },
-        {
-          "name": "Croatia",
-          "pot": "A",
-          "points": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "matches": [],
           "bonuses": []
         }
       ],
@@ -892,7 +900,7 @@
     },
     {
       "name": "Dec N",
-      "total": 0,
+      "total": 1,
       "teams": [
         {
           "name": "Uzbekistan",
@@ -925,11 +933,19 @@
         {
           "name": "England",
           "pot": "A",
-          "points": 0,
+          "points": 1,
           "wins": 0,
-          "draws": 0,
+          "draws": 1,
           "losses": 0,
-          "matches": [],
+          "matches": [
+            {
+              "opponent": "Croatia",
+              "result": "draw",
+              "goals_for": 2,
+              "goals_against": 2,
+              "date": "2026-06-17"
+            }
+          ],
           "bonuses": []
         }
       ],
@@ -1125,6 +1141,15 @@
       "score2": 1,
       "date": "2026-06-17",
       "group": "GROUP_K"
+    },
+    {
+      "team1": "England",
+      "team2": "Croatia",
+      "result": "draw",
+      "score1": 2,
+      "score2": 2,
+      "date": "2026-06-17",
+      "group": "GROUP_L"
     }
   ]
 }
