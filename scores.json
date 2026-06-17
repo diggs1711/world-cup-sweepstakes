@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "17 Jun 2026, 07:00",
+  "lastUpdated": "17 Jun 2026, 19:00",
   "players": [
     {
       "name": "Digs",
@@ -301,6 +301,69 @@
       "rank": 5
     },
     {
+      "name": "Losty",
+      "total": 4,
+      "teams": [
+        {
+          "name": "Saudi Arabia",
+          "pot": "C",
+          "points": 2,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "matches": [
+            {
+              "opponent": "Uruguay",
+              "result": "draw",
+              "goals_for": 1,
+              "goals_against": 1,
+              "date": "2026-06-15"
+            }
+          ],
+          "bonuses": [
+            "+1 underdog vs Uruguay"
+          ]
+        },
+        {
+          "name": "Japan",
+          "pot": "B",
+          "points": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "matches": [
+            {
+              "opponent": "Netherlands",
+              "result": "draw",
+              "goals_for": 2,
+              "goals_against": 2,
+              "date": "2026-06-14"
+            }
+          ],
+          "bonuses": []
+        },
+        {
+          "name": "Portugal",
+          "pot": "A",
+          "points": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "matches": [
+            {
+              "opponent": "Congo",
+              "result": "draw",
+              "goals_for": 1,
+              "goals_against": 1,
+              "date": "2026-06-17"
+            }
+          ],
+          "bonuses": []
+        }
+      ],
+      "rank": 6
+    },
+    {
       "name": "Smyth",
       "total": 4,
       "teams": [
@@ -359,7 +422,7 @@
           "bonuses": []
         }
       ],
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "Stu",
@@ -394,7 +457,7 @@
             {
               "opponent": "Jordan",
               "result": "win",
-              "goals_for": 2,
+              "goals_for": 3,
               "goals_against": 1,
               "date": "2026-06-17"
             }
@@ -412,7 +475,7 @@
           "bonuses": []
         }
       ],
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "Deano",
@@ -473,7 +536,7 @@
           "bonuses": []
         }
       ],
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "CMD",
@@ -526,7 +589,7 @@
           "bonuses": []
         }
       ],
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "Dave W",
@@ -584,61 +647,6 @@
               "date": "2026-06-13"
             }
           ],
-          "bonuses": []
-        }
-      ],
-      "rank": 10
-    },
-    {
-      "name": "Losty",
-      "total": 3,
-      "teams": [
-        {
-          "name": "Saudi Arabia",
-          "pot": "C",
-          "points": 2,
-          "wins": 0,
-          "draws": 1,
-          "losses": 0,
-          "matches": [
-            {
-              "opponent": "Uruguay",
-              "result": "draw",
-              "goals_for": 1,
-              "goals_against": 1,
-              "date": "2026-06-15"
-            }
-          ],
-          "bonuses": [
-            "+1 underdog vs Uruguay"
-          ]
-        },
-        {
-          "name": "Japan",
-          "pot": "B",
-          "points": 1,
-          "wins": 0,
-          "draws": 1,
-          "losses": 0,
-          "matches": [
-            {
-              "opponent": "Netherlands",
-              "result": "draw",
-              "goals_for": 2,
-              "goals_against": 2,
-              "date": "2026-06-14"
-            }
-          ],
-          "bonuses": []
-        },
-        {
-          "name": "Portugal",
-          "pot": "A",
-          "points": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "matches": [],
           "bonuses": []
         }
       ],
@@ -706,6 +714,69 @@
       "rank": 12
     },
     {
+      "name": "Dec W",
+      "total": 3,
+      "teams": [
+        {
+          "name": "Congo",
+          "pot": "C",
+          "points": 2,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "matches": [
+            {
+              "opponent": "Portugal",
+              "result": "draw",
+              "goals_for": 1,
+              "goals_against": 1,
+              "date": "2026-06-17"
+            }
+          ],
+          "bonuses": [
+            "+1 underdog vs Portugal"
+          ]
+        },
+        {
+          "name": "Paraguay",
+          "pot": "B",
+          "points": 0,
+          "wins": 0,
+          "draws": 0,
+          "losses": 1,
+          "matches": [
+            {
+              "opponent": "USA",
+              "result": "loss",
+              "goals_for": 1,
+              "goals_against": 4,
+              "date": "2026-06-13"
+            }
+          ],
+          "bonuses": []
+        },
+        {
+          "name": "Morocco",
+          "pot": "A",
+          "points": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "matches": [
+            {
+              "opponent": "Brazil",
+              "result": "draw",
+              "goals_for": 1,
+              "goals_against": 1,
+              "date": "2026-06-13"
+            }
+          ],
+          "bonuses": []
+        }
+      ],
+      "rank": 13
+    },
+    {
       "name": "Glen",
       "total": 3,
       "teams": [
@@ -756,7 +827,7 @@
           "bonuses": []
         }
       ],
-      "rank": 13
+      "rank": 14
     },
     {
       "name": "POTB",
@@ -774,7 +845,7 @@
               "opponent": "Austria",
               "result": "loss",
               "goals_for": 1,
-              "goals_against": 2,
+              "goals_against": 3,
               "date": "2026-06-17"
             }
           ],
@@ -812,59 +883,6 @@
               "goals_for": 1,
               "goals_against": 1,
               "date": "2026-06-15"
-            }
-          ],
-          "bonuses": []
-        }
-      ],
-      "rank": 14
-    },
-    {
-      "name": "Dec W",
-      "total": 1,
-      "teams": [
-        {
-          "name": "Congo",
-          "pot": "C",
-          "points": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "matches": [],
-          "bonuses": []
-        },
-        {
-          "name": "Paraguay",
-          "pot": "B",
-          "points": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 1,
-          "matches": [
-            {
-              "opponent": "USA",
-              "result": "loss",
-              "goals_for": 1,
-              "goals_against": 4,
-              "date": "2026-06-13"
-            }
-          ],
-          "bonuses": []
-        },
-        {
-          "name": "Morocco",
-          "pot": "A",
-          "points": 1,
-          "wins": 0,
-          "draws": 1,
-          "losses": 0,
-          "matches": [
-            {
-              "opponent": "Brazil",
-              "result": "draw",
-              "goals_for": 1,
-              "goals_against": 1,
-              "date": "2026-06-13"
             }
           ],
           "bonuses": []
@@ -1094,10 +1112,19 @@
       "team1": "Austria",
       "team2": "Jordan",
       "result": "home",
-      "score1": 2,
+      "score1": 3,
       "score2": 1,
       "date": "2026-06-17",
       "group": "GROUP_J"
+    },
+    {
+      "team1": "Portugal",
+      "team2": "Congo",
+      "result": "draw",
+      "score1": 1,
+      "score2": 1,
+      "date": "2026-06-17",
+      "group": "GROUP_K"
     }
   ]
 }
