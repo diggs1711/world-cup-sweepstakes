@@ -1,6 +1,81 @@
 {
-  "lastUpdated": "18 Jun 2026, 21:00",
+  "lastUpdated": "18 Jun 2026, 23:00",
   "players": [
+    {
+      "name": "Deano",
+      "total": 8,
+      "teams": [
+        {
+          "name": "South Africa",
+          "pot": "C",
+          "points": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 1,
+          "matches": [
+            {
+              "opponent": "Mexico",
+              "result": "loss",
+              "goals_for": 0,
+              "goals_against": 2,
+              "date": "2026-06-11"
+            },
+            {
+              "opponent": "Czechia",
+              "result": "draw",
+              "goals_for": 1,
+              "goals_against": 1,
+              "date": "2026-06-18"
+            }
+          ],
+          "bonuses": []
+        },
+        {
+          "name": "Switzerland",
+          "pot": "B",
+          "points": 4,
+          "wins": 1,
+          "draws": 1,
+          "losses": 0,
+          "matches": [
+            {
+              "opponent": "Qatar",
+              "result": "draw",
+              "goals_for": 1,
+              "goals_against": 1,
+              "date": "2026-06-13"
+            },
+            {
+              "opponent": "Bosnia",
+              "result": "win",
+              "goals_for": 4,
+              "goals_against": 1,
+              "date": "2026-06-18"
+            }
+          ],
+          "bonuses": []
+        },
+        {
+          "name": "USA",
+          "pot": "A",
+          "points": 3,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0,
+          "matches": [
+            {
+              "opponent": "Paraguay",
+              "result": "win",
+              "goals_for": 4,
+              "goals_against": 1,
+              "date": "2026-06-13"
+            }
+          ],
+          "bonuses": []
+        }
+      ],
+      "rank": 1
+    },
     {
       "name": "Stu",
       "total": 7,
@@ -11,7 +86,7 @@
           "points": 1,
           "wins": 0,
           "draws": 1,
-          "losses": 0,
+          "losses": 1,
           "matches": [
             {
               "opponent": "Canada",
@@ -19,6 +94,13 @@
               "goals_for": 1,
               "goals_against": 1,
               "date": "2026-06-12"
+            },
+            {
+              "opponent": "Switzerland",
+              "result": "loss",
+              "goals_for": 1,
+              "goals_against": 4,
+              "date": "2026-06-18"
             }
           ],
           "bonuses": []
@@ -60,7 +142,7 @@
           "bonuses": []
         }
       ],
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "CMD",
@@ -121,7 +203,7 @@
           "bonuses": []
         }
       ],
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "Digs",
@@ -184,7 +266,7 @@
           "bonuses": []
         }
       ],
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "Sean",
@@ -252,7 +334,7 @@
           "bonuses": []
         }
       ],
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "Sash",
@@ -308,74 +390,6 @@
               "goals_for": 7,
               "goals_against": 1,
               "date": "2026-06-14"
-            }
-          ],
-          "bonuses": []
-        }
-      ],
-      "rank": 5
-    },
-    {
-      "name": "Deano",
-      "total": 5,
-      "teams": [
-        {
-          "name": "South Africa",
-          "pot": "C",
-          "points": 1,
-          "wins": 0,
-          "draws": 1,
-          "losses": 1,
-          "matches": [
-            {
-              "opponent": "Mexico",
-              "result": "loss",
-              "goals_for": 0,
-              "goals_against": 2,
-              "date": "2026-06-11"
-            },
-            {
-              "opponent": "Czechia",
-              "result": "draw",
-              "goals_for": 1,
-              "goals_against": 1,
-              "date": "2026-06-18"
-            }
-          ],
-          "bonuses": []
-        },
-        {
-          "name": "Switzerland",
-          "pot": "B",
-          "points": 1,
-          "wins": 0,
-          "draws": 1,
-          "losses": 0,
-          "matches": [
-            {
-              "opponent": "Qatar",
-              "result": "draw",
-              "goals_for": 1,
-              "goals_against": 1,
-              "date": "2026-06-13"
-            }
-          ],
-          "bonuses": []
-        },
-        {
-          "name": "USA",
-          "pot": "A",
-          "points": 3,
-          "wins": 1,
-          "draws": 0,
-          "losses": 0,
-          "matches": [
-            {
-              "opponent": "Paraguay",
-              "result": "win",
-              "goals_for": 4,
-              "goals_against": 1,
-              "date": "2026-06-13"
             }
           ],
           "bonuses": []
@@ -1223,6 +1237,15 @@
       "score2": 1,
       "date": "2026-06-18",
       "group": "GROUP_A"
+    },
+    {
+      "team1": "Switzerland",
+      "team2": "Bosnia",
+      "result": "home",
+      "score1": 4,
+      "score2": 1,
+      "date": "2026-06-18",
+      "group": "GROUP_B"
     }
   ]
 }
