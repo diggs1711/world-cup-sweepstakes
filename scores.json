@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "20 Jun 2026, 19:00",
+  "lastUpdated": "20 Jun 2026, 20:00",
   "players": [
     {
       "name": "Deano",
@@ -363,8 +363,8 @@
             {
               "opponent": "Sweden",
               "result": "win",
-              "goals_for": 2,
-              "goals_against": 0,
+              "goals_for": 5,
+              "goals_against": 1,
               "date": "2026-06-20"
             }
           ],
@@ -823,8 +823,8 @@
             {
               "opponent": "Netherlands",
               "result": "loss",
-              "goals_for": 0,
-              "goals_against": 2,
+              "goals_for": 1,
+              "goals_against": 5,
               "date": "2026-06-20"
             }
           ],
@@ -1403,8 +1403,8 @@
       "team1": "Netherlands",
       "team2": "Sweden",
       "result": "home",
-      "score1": 2,
-      "score2": 0,
+      "score1": 5,
+      "score2": 1,
       "date": "2026-06-20",
       "group": "GROUP_F"
     }
