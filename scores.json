@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "21 Jun 2026, 20:00",
+  "lastUpdated": "21 Jun 2026, 21:00",
   "players": [
     {
       "name": "Sash",
@@ -677,7 +677,7 @@
     },
     {
       "name": "Sean",
-      "total": 5,
+      "total": 6,
       "teams": [
         {
           "name": "Czechia",
@@ -725,9 +725,9 @@
         {
           "name": "Belgium",
           "pot": "A",
-          "points": 1,
+          "points": 2,
           "wins": 0,
-          "draws": 1,
+          "draws": 2,
           "losses": 0,
           "matches": [
             {
@@ -736,6 +736,13 @@
               "goals_for": 1,
               "goals_against": 1,
               "date": "2026-06-15"
+            },
+            {
+              "opponent": "Iran",
+              "result": "draw",
+              "goals_for": 0,
+              "goals_against": 0,
+              "date": "2026-06-21"
             }
           ],
           "bonuses": []
@@ -745,7 +752,7 @@
     },
     {
       "name": "Tadhg",
-      "total": 4,
+      "total": 5,
       "teams": [
         {
           "name": "Haiti",
@@ -775,9 +782,9 @@
         {
           "name": "Iran",
           "pot": "B",
-          "points": 1,
+          "points": 2,
           "wins": 0,
-          "draws": 1,
+          "draws": 2,
           "losses": 0,
           "matches": [
             {
@@ -786,6 +793,13 @@
               "goals_for": 2,
               "goals_against": 2,
               "date": "2026-06-16"
+            },
+            {
+              "opponent": "Belgium",
+              "result": "draw",
+              "goals_for": 0,
+              "goals_against": 0,
+              "date": "2026-06-21"
             }
           ],
           "bonuses": []
@@ -1499,6 +1513,15 @@
       "score2": 0,
       "date": "2026-06-21",
       "group": "GROUP_H"
+    },
+    {
+      "team1": "Belgium",
+      "team2": "Iran",
+      "result": "draw",
+      "score1": 0,
+      "score2": 0,
+      "date": "2026-06-21",
+      "group": "GROUP_G"
     }
   ]
 }
