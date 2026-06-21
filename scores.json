@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "21 Jun 2026, 21:00",
+  "lastUpdated": "21 Jun 2026, 22:00",
   "players": [
     {
       "name": "Sash",
@@ -223,7 +223,7 @@
             {
               "opponent": "Saudi Arabia",
               "result": "win",
-              "goals_for": 5,
+              "goals_for": 4,
               "goals_against": 0,
               "date": "2026-06-21"
             }
@@ -478,7 +478,7 @@
               "opponent": "Spain",
               "result": "loss",
               "goals_for": 0,
-              "goals_against": 5,
+              "goals_against": 4,
               "date": "2026-06-21"
             }
           ],
@@ -1509,7 +1509,7 @@
       "team1": "Spain",
       "team2": "Saudi Arabia",
       "result": "home",
-      "score1": 5,
+      "score1": 4,
       "score2": 0,
       "date": "2026-06-21",
       "group": "GROUP_H"
