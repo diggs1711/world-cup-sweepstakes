@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "22 Jun 2026, 22:00",
+  "lastUpdated": "22 Jun 2026, 23:00",
   "players": [
     {
       "name": "Sash",
@@ -721,7 +721,7 @@
           "points": 0,
           "wins": 0,
           "draws": 0,
-          "losses": 1,
+          "losses": 2,
           "matches": [
             {
               "opponent": "Norway",
@@ -729,6 +729,13 @@
               "goals_for": 1,
               "goals_against": 4,
               "date": "2026-06-16"
+            },
+            {
+              "opponent": "France",
+              "result": "loss",
+              "goals_for": 0,
+              "goals_against": 1,
+              "date": "2026-06-22"
             }
           ],
           "bonuses": []
@@ -862,6 +869,81 @@
       "rank": 11
     },
     {
+      "name": "Cali",
+      "total": 6,
+      "teams": [
+        {
+          "name": "Tunisia",
+          "pot": "C",
+          "points": 0,
+          "wins": 0,
+          "draws": 0,
+          "losses": 2,
+          "matches": [
+            {
+              "opponent": "Sweden",
+              "result": "loss",
+              "goals_for": 1,
+              "goals_against": 5,
+              "date": "2026-06-15"
+            },
+            {
+              "opponent": "Japan",
+              "result": "loss",
+              "goals_for": 0,
+              "goals_against": 4,
+              "date": "2026-06-21"
+            }
+          ],
+          "bonuses": []
+        },
+        {
+          "name": "Algeria",
+          "pot": "B",
+          "points": 0,
+          "wins": 0,
+          "draws": 0,
+          "losses": 1,
+          "matches": [
+            {
+              "opponent": "Argentina",
+              "result": "loss",
+              "goals_for": 0,
+              "goals_against": 3,
+              "date": "2026-06-17"
+            }
+          ],
+          "bonuses": []
+        },
+        {
+          "name": "France",
+          "pot": "A",
+          "points": 6,
+          "wins": 2,
+          "draws": 0,
+          "losses": 0,
+          "matches": [
+            {
+              "opponent": "Senegal",
+              "result": "win",
+              "goals_for": 3,
+              "goals_against": 1,
+              "date": "2026-06-16"
+            },
+            {
+              "opponent": "Iraq",
+              "result": "win",
+              "goals_for": 1,
+              "goals_against": 0,
+              "date": "2026-06-22"
+            }
+          ],
+          "bonuses": []
+        }
+      ],
+      "rank": 12
+    },
+    {
       "name": "Smyth",
       "total": 4,
       "teams": [
@@ -934,7 +1016,7 @@
           "bonuses": []
         }
       ],
-      "rank": 12
+      "rank": 13
     },
     {
       "name": "Glen",
@@ -1009,7 +1091,7 @@
           "bonuses": []
         }
       ],
-      "rank": 13
+      "rank": 14
     },
     {
       "name": "POTB",
@@ -1079,74 +1161,6 @@
               "goals_for": 2,
               "goals_against": 2,
               "date": "2026-06-21"
-            }
-          ],
-          "bonuses": []
-        }
-      ],
-      "rank": 14
-    },
-    {
-      "name": "Cali",
-      "total": 3,
-      "teams": [
-        {
-          "name": "Tunisia",
-          "pot": "C",
-          "points": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 2,
-          "matches": [
-            {
-              "opponent": "Sweden",
-              "result": "loss",
-              "goals_for": 1,
-              "goals_against": 5,
-              "date": "2026-06-15"
-            },
-            {
-              "opponent": "Japan",
-              "result": "loss",
-              "goals_for": 0,
-              "goals_against": 4,
-              "date": "2026-06-21"
-            }
-          ],
-          "bonuses": []
-        },
-        {
-          "name": "Algeria",
-          "pot": "B",
-          "points": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 1,
-          "matches": [
-            {
-              "opponent": "Argentina",
-              "result": "loss",
-              "goals_for": 0,
-              "goals_against": 3,
-              "date": "2026-06-17"
-            }
-          ],
-          "bonuses": []
-        },
-        {
-          "name": "France",
-          "pot": "A",
-          "points": 3,
-          "wins": 1,
-          "draws": 0,
-          "losses": 0,
-          "matches": [
-            {
-              "opponent": "Senegal",
-              "result": "win",
-              "goals_for": 3,
-              "goals_against": 1,
-              "date": "2026-06-16"
             }
           ],
           "bonuses": []
@@ -1592,6 +1606,15 @@
       "score2": 0,
       "date": "2026-06-22",
       "group": "GROUP_J"
+    },
+    {
+      "team1": "France",
+      "team2": "Iraq",
+      "result": "home",
+      "score1": 1,
+      "score2": 0,
+      "date": "2026-06-22",
+      "group": "GROUP_I"
     }
   ]
 }
