@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "23 Jun 2026, 19:00",
+  "lastUpdated": "23 Jun 2026, 20:00",
   "players": [
     {
       "name": "Sash",
@@ -483,7 +483,7 @@
             {
               "opponent": "Uzbekistan",
               "result": "win",
-              "goals_for": 3,
+              "goals_for": 5,
               "goals_against": 0,
               "date": "2026-06-23"
             }
@@ -1228,7 +1228,7 @@
               "opponent": "Portugal",
               "result": "loss",
               "goals_for": 0,
-              "goals_against": 3,
+              "goals_against": 5,
               "date": "2026-06-23"
             }
           ],
@@ -1682,7 +1682,7 @@
       "team1": "Portugal",
       "team2": "Uzbekistan",
       "result": "home",
-      "score1": 3,
+      "score1": 5,
       "score2": 0,
       "date": "2026-06-23",
       "group": "GROUP_K"
