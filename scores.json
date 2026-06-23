@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "23 Jun 2026, 07:00",
+  "lastUpdated": "23 Jun 2026, 19:00",
   "players": [
     {
       "name": "Sash",
@@ -410,6 +410,90 @@
       "rank": 5
     },
     {
+      "name": "Losty",
+      "total": 10,
+      "teams": [
+        {
+          "name": "Saudi Arabia",
+          "pot": "C",
+          "points": 2,
+          "wins": 0,
+          "draws": 1,
+          "losses": 1,
+          "matches": [
+            {
+              "opponent": "Uruguay",
+              "result": "draw",
+              "goals_for": 1,
+              "goals_against": 1,
+              "date": "2026-06-15"
+            },
+            {
+              "opponent": "Spain",
+              "result": "loss",
+              "goals_for": 0,
+              "goals_against": 4,
+              "date": "2026-06-21"
+            }
+          ],
+          "bonuses": [
+            "+1 underdog vs Uruguay"
+          ]
+        },
+        {
+          "name": "Japan",
+          "pot": "B",
+          "points": 4,
+          "wins": 1,
+          "draws": 1,
+          "losses": 0,
+          "matches": [
+            {
+              "opponent": "Netherlands",
+              "result": "draw",
+              "goals_for": 2,
+              "goals_against": 2,
+              "date": "2026-06-14"
+            },
+            {
+              "opponent": "Tunisia",
+              "result": "win",
+              "goals_for": 4,
+              "goals_against": 0,
+              "date": "2026-06-21"
+            }
+          ],
+          "bonuses": []
+        },
+        {
+          "name": "Portugal",
+          "pot": "A",
+          "points": 4,
+          "wins": 1,
+          "draws": 1,
+          "losses": 0,
+          "matches": [
+            {
+              "opponent": "Congo",
+              "result": "draw",
+              "goals_for": 1,
+              "goals_against": 1,
+              "date": "2026-06-17"
+            },
+            {
+              "opponent": "Uzbekistan",
+              "result": "win",
+              "goals_for": 3,
+              "goals_against": 0,
+              "date": "2026-06-23"
+            }
+          ],
+          "bonuses": []
+        }
+      ],
+      "rank": 6
+    },
+    {
       "name": "CMD",
       "total": 10,
       "teams": [
@@ -482,7 +566,7 @@
           "bonuses": []
         }
       ],
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "Cali",
@@ -564,7 +648,7 @@
           "bonuses": []
         }
       ],
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "Dec W",
@@ -641,7 +725,7 @@
           "bonuses": []
         }
       ],
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "Tadhg",
@@ -718,83 +802,6 @@
               "goals_for": 2,
               "goals_against": 0,
               "date": "2026-06-22"
-            }
-          ],
-          "bonuses": []
-        }
-      ],
-      "rank": 9
-    },
-    {
-      "name": "Losty",
-      "total": 7,
-      "teams": [
-        {
-          "name": "Saudi Arabia",
-          "pot": "C",
-          "points": 2,
-          "wins": 0,
-          "draws": 1,
-          "losses": 1,
-          "matches": [
-            {
-              "opponent": "Uruguay",
-              "result": "draw",
-              "goals_for": 1,
-              "goals_against": 1,
-              "date": "2026-06-15"
-            },
-            {
-              "opponent": "Spain",
-              "result": "loss",
-              "goals_for": 0,
-              "goals_against": 4,
-              "date": "2026-06-21"
-            }
-          ],
-          "bonuses": [
-            "+1 underdog vs Uruguay"
-          ]
-        },
-        {
-          "name": "Japan",
-          "pot": "B",
-          "points": 4,
-          "wins": 1,
-          "draws": 1,
-          "losses": 0,
-          "matches": [
-            {
-              "opponent": "Netherlands",
-              "result": "draw",
-              "goals_for": 2,
-              "goals_against": 2,
-              "date": "2026-06-14"
-            },
-            {
-              "opponent": "Tunisia",
-              "result": "win",
-              "goals_for": 4,
-              "goals_against": 0,
-              "date": "2026-06-21"
-            }
-          ],
-          "bonuses": []
-        },
-        {
-          "name": "Portugal",
-          "pot": "A",
-          "points": 1,
-          "wins": 0,
-          "draws": 1,
-          "losses": 0,
-          "matches": [
-            {
-              "opponent": "Congo",
-              "result": "draw",
-              "goals_for": 1,
-              "goals_against": 1,
-              "date": "2026-06-17"
             }
           ],
           "bonuses": []
@@ -1208,7 +1215,7 @@
           "points": 0,
           "wins": 0,
           "draws": 0,
-          "losses": 1,
+          "losses": 2,
           "matches": [
             {
               "opponent": "Colombia",
@@ -1216,6 +1223,13 @@
               "goals_for": 1,
               "goals_against": 3,
               "date": "2026-06-18"
+            },
+            {
+              "opponent": "Portugal",
+              "result": "loss",
+              "goals_for": 0,
+              "goals_against": 3,
+              "date": "2026-06-23"
             }
           ],
           "bonuses": []
@@ -1663,6 +1677,15 @@
       "score2": 2,
       "date": "2026-06-23",
       "group": "GROUP_J"
+    },
+    {
+      "team1": "Portugal",
+      "team2": "Uzbekistan",
+      "result": "home",
+      "score1": 3,
+      "score2": 0,
+      "date": "2026-06-23",
+      "group": "GROUP_K"
     }
   ]
 }
