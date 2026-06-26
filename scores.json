@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "26 Jun 2026, 20:00",
+  "lastUpdated": "26 Jun 2026, 21:00",
   "players": [
     {
       "name": "Deano",
@@ -571,6 +571,102 @@
       "rank": 6
     },
     {
+      "name": "Cali",
+      "total": 12,
+      "teams": [
+        {
+          "name": "Tunisia",
+          "pot": "C",
+          "points": 0,
+          "wins": 0,
+          "draws": 0,
+          "losses": 3,
+          "matches": [
+            {
+              "opponent": "Sweden",
+              "result": "loss",
+              "goals_for": 1,
+              "goals_against": 5,
+              "date": "2026-06-15"
+            },
+            {
+              "opponent": "Japan",
+              "result": "loss",
+              "goals_for": 0,
+              "goals_against": 4,
+              "date": "2026-06-21"
+            },
+            {
+              "opponent": "Netherlands",
+              "result": "loss",
+              "goals_for": 1,
+              "goals_against": 3,
+              "date": "2026-06-25"
+            }
+          ],
+          "bonuses": []
+        },
+        {
+          "name": "Algeria",
+          "pot": "B",
+          "points": 3,
+          "wins": 1,
+          "draws": 0,
+          "losses": 1,
+          "matches": [
+            {
+              "opponent": "Argentina",
+              "result": "loss",
+              "goals_for": 0,
+              "goals_against": 3,
+              "date": "2026-06-17"
+            },
+            {
+              "opponent": "Jordan",
+              "result": "win",
+              "goals_for": 2,
+              "goals_against": 1,
+              "date": "2026-06-23"
+            }
+          ],
+          "bonuses": []
+        },
+        {
+          "name": "France",
+          "pot": "A",
+          "points": 9,
+          "wins": 3,
+          "draws": 0,
+          "losses": 0,
+          "matches": [
+            {
+              "opponent": "Senegal",
+              "result": "win",
+              "goals_for": 3,
+              "goals_against": 1,
+              "date": "2026-06-16"
+            },
+            {
+              "opponent": "Iraq",
+              "result": "win",
+              "goals_for": 3,
+              "goals_against": 0,
+              "date": "2026-06-22"
+            },
+            {
+              "opponent": "Norway",
+              "result": "win",
+              "goals_for": 3,
+              "goals_against": 1,
+              "date": "2026-06-26"
+            }
+          ],
+          "bonuses": []
+        }
+      ],
+      "rank": 7
+    },
+    {
       "name": "Losty",
       "total": 11,
       "teams": [
@@ -659,7 +755,7 @@
           "bonuses": []
         }
       ],
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "Sash",
@@ -755,7 +851,7 @@
           "bonuses": []
         }
       ],
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "Dave W",
@@ -851,7 +947,7 @@
           "bonuses": []
         }
       ],
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "Sean",
@@ -895,7 +991,7 @@
           "points": 7,
           "wins": 2,
           "draws": 0,
-          "losses": 0,
+          "losses": 1,
           "matches": [
             {
               "opponent": "Iraq",
@@ -910,6 +1006,13 @@
               "goals_for": 3,
               "goals_against": 2,
               "date": "2026-06-23"
+            },
+            {
+              "opponent": "France",
+              "result": "loss",
+              "goals_for": 1,
+              "goals_against": 3,
+              "date": "2026-06-26"
             }
           ],
           "bonuses": [
@@ -937,95 +1040,6 @@
               "goals_for": 0,
               "goals_against": 0,
               "date": "2026-06-21"
-            }
-          ],
-          "bonuses": []
-        }
-      ],
-      "rank": 10
-    },
-    {
-      "name": "Cali",
-      "total": 9,
-      "teams": [
-        {
-          "name": "Tunisia",
-          "pot": "C",
-          "points": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 3,
-          "matches": [
-            {
-              "opponent": "Sweden",
-              "result": "loss",
-              "goals_for": 1,
-              "goals_against": 5,
-              "date": "2026-06-15"
-            },
-            {
-              "opponent": "Japan",
-              "result": "loss",
-              "goals_for": 0,
-              "goals_against": 4,
-              "date": "2026-06-21"
-            },
-            {
-              "opponent": "Netherlands",
-              "result": "loss",
-              "goals_for": 1,
-              "goals_against": 3,
-              "date": "2026-06-25"
-            }
-          ],
-          "bonuses": []
-        },
-        {
-          "name": "Algeria",
-          "pot": "B",
-          "points": 3,
-          "wins": 1,
-          "draws": 0,
-          "losses": 1,
-          "matches": [
-            {
-              "opponent": "Argentina",
-              "result": "loss",
-              "goals_for": 0,
-              "goals_against": 3,
-              "date": "2026-06-17"
-            },
-            {
-              "opponent": "Jordan",
-              "result": "win",
-              "goals_for": 2,
-              "goals_against": 1,
-              "date": "2026-06-23"
-            }
-          ],
-          "bonuses": []
-        },
-        {
-          "name": "France",
-          "pot": "A",
-          "points": 6,
-          "wins": 2,
-          "draws": 0,
-          "losses": 0,
-          "matches": [
-            {
-              "opponent": "Senegal",
-              "result": "win",
-              "goals_for": 3,
-              "goals_against": 1,
-              "date": "2026-06-16"
-            },
-            {
-              "opponent": "Iraq",
-              "result": "win",
-              "goals_for": 3,
-              "goals_against": 0,
-              "date": "2026-06-22"
             }
           ],
           "bonuses": []
@@ -2037,6 +2051,15 @@
       "score2": 0,
       "date": "2026-06-26",
       "group": "GROUP_D"
+    },
+    {
+      "team1": "Norway",
+      "team2": "France",
+      "result": "away",
+      "score1": 1,
+      "score2": 3,
+      "date": "2026-06-26",
+      "group": "GROUP_I"
     }
   ]
 }
