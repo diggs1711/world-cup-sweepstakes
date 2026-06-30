@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "30 Jun 2026, 19:00",
+  "lastUpdated": "30 Jun 2026, 20:01",
   "players": [
     {
       "name": "Dec W",
@@ -192,8 +192,8 @@
             {
               "opponent": "Norway",
               "result": "loss",
-              "goals_for": 0,
-              "goals_against": 1,
+              "goals_for": 1,
+              "goals_against": 2,
               "date": "2026-06-30"
             }
           ],
@@ -412,8 +412,8 @@
             {
               "opponent": "Ivory Coast",
               "result": "win",
-              "goals_for": 1,
-              "goals_against": 0,
+              "goals_for": 2,
+              "goals_against": 1,
               "date": "2026-06-30"
             }
           ],
@@ -2426,8 +2426,8 @@
       "team1": "Ivory Coast",
       "team2": "Norway",
       "result": "away",
-      "score1": 0,
-      "score2": 1,
+      "score1": 1,
+      "score2": 2,
       "date": "2026-06-30",
       "group": ""
     }
