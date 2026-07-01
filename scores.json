@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "01 Jul 2026, 21:00",
+  "lastUpdated": "01 Jul 2026, 22:00",
   "players": [
     {
       "name": "Dec W",
@@ -547,7 +547,7 @@
           "points": 5,
           "wins": 1,
           "draws": 2,
-          "losses": 0,
+          "losses": 1,
           "matches": [
             {
               "opponent": "Egypt",
@@ -569,6 +569,13 @@
               "goals_for": 5,
               "goals_against": 1,
               "date": "2026-06-27"
+            },
+            {
+              "opponent": "Senegal",
+              "result": "loss",
+              "goals_for": 0,
+              "goals_against": 1,
+              "date": "2026-07-01"
             }
           ],
           "bonuses": []
@@ -1454,6 +1461,123 @@
       "rank": 13
     },
     {
+      "name": "Smyth",
+      "total": 11,
+      "teams": [
+        {
+          "name": "Qatar",
+          "pot": "C",
+          "points": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 2,
+          "matches": [
+            {
+              "opponent": "Switzerland",
+              "result": "draw",
+              "goals_for": 1,
+              "goals_against": 1,
+              "date": "2026-06-13"
+            },
+            {
+              "opponent": "Canada",
+              "result": "loss",
+              "goals_for": 0,
+              "goals_against": 6,
+              "date": "2026-06-18"
+            },
+            {
+              "opponent": "Bosnia",
+              "result": "loss",
+              "goals_for": 1,
+              "goals_against": 3,
+              "date": "2026-06-24"
+            }
+          ],
+          "bonuses": []
+        },
+        {
+          "name": "Sweden",
+          "pot": "B",
+          "points": 4,
+          "wins": 1,
+          "draws": 1,
+          "losses": 2,
+          "matches": [
+            {
+              "opponent": "Tunisia",
+              "result": "win",
+              "goals_for": 5,
+              "goals_against": 1,
+              "date": "2026-06-15"
+            },
+            {
+              "opponent": "Netherlands",
+              "result": "loss",
+              "goals_for": 1,
+              "goals_against": 5,
+              "date": "2026-06-20"
+            },
+            {
+              "opponent": "Japan",
+              "result": "draw",
+              "goals_for": 1,
+              "goals_against": 1,
+              "date": "2026-06-25"
+            },
+            {
+              "opponent": "France",
+              "result": "loss",
+              "goals_for": 0,
+              "goals_against": 3,
+              "date": "2026-06-30"
+            }
+          ],
+          "bonuses": []
+        },
+        {
+          "name": "Senegal",
+          "pot": "A",
+          "points": 6,
+          "wins": 2,
+          "draws": 0,
+          "losses": 2,
+          "matches": [
+            {
+              "opponent": "France",
+              "result": "loss",
+              "goals_for": 1,
+              "goals_against": 3,
+              "date": "2026-06-16"
+            },
+            {
+              "opponent": "Norway",
+              "result": "loss",
+              "goals_for": 2,
+              "goals_against": 3,
+              "date": "2026-06-23"
+            },
+            {
+              "opponent": "Iraq",
+              "result": "win",
+              "goals_for": 5,
+              "goals_against": 0,
+              "date": "2026-06-26"
+            },
+            {
+              "opponent": "Belgium",
+              "result": "win",
+              "goals_for": 1,
+              "goals_against": 0,
+              "date": "2026-07-01"
+            }
+          ],
+          "bonuses": []
+        }
+      ],
+      "rank": 14
+    },
+    {
       "name": "Glen",
       "total": 10,
       "teams": [
@@ -1549,116 +1673,6 @@
               "goals_for": 2,
               "goals_against": 1,
               "date": "2026-06-27"
-            }
-          ],
-          "bonuses": []
-        }
-      ],
-      "rank": 14
-    },
-    {
-      "name": "Smyth",
-      "total": 8,
-      "teams": [
-        {
-          "name": "Qatar",
-          "pot": "C",
-          "points": 1,
-          "wins": 0,
-          "draws": 1,
-          "losses": 2,
-          "matches": [
-            {
-              "opponent": "Switzerland",
-              "result": "draw",
-              "goals_for": 1,
-              "goals_against": 1,
-              "date": "2026-06-13"
-            },
-            {
-              "opponent": "Canada",
-              "result": "loss",
-              "goals_for": 0,
-              "goals_against": 6,
-              "date": "2026-06-18"
-            },
-            {
-              "opponent": "Bosnia",
-              "result": "loss",
-              "goals_for": 1,
-              "goals_against": 3,
-              "date": "2026-06-24"
-            }
-          ],
-          "bonuses": []
-        },
-        {
-          "name": "Sweden",
-          "pot": "B",
-          "points": 4,
-          "wins": 1,
-          "draws": 1,
-          "losses": 2,
-          "matches": [
-            {
-              "opponent": "Tunisia",
-              "result": "win",
-              "goals_for": 5,
-              "goals_against": 1,
-              "date": "2026-06-15"
-            },
-            {
-              "opponent": "Netherlands",
-              "result": "loss",
-              "goals_for": 1,
-              "goals_against": 5,
-              "date": "2026-06-20"
-            },
-            {
-              "opponent": "Japan",
-              "result": "draw",
-              "goals_for": 1,
-              "goals_against": 1,
-              "date": "2026-06-25"
-            },
-            {
-              "opponent": "France",
-              "result": "loss",
-              "goals_for": 0,
-              "goals_against": 3,
-              "date": "2026-06-30"
-            }
-          ],
-          "bonuses": []
-        },
-        {
-          "name": "Senegal",
-          "pot": "A",
-          "points": 3,
-          "wins": 1,
-          "draws": 0,
-          "losses": 2,
-          "matches": [
-            {
-              "opponent": "France",
-              "result": "loss",
-              "goals_for": 1,
-              "goals_against": 3,
-              "date": "2026-06-16"
-            },
-            {
-              "opponent": "Norway",
-              "result": "loss",
-              "goals_for": 2,
-              "goals_against": 3,
-              "date": "2026-06-23"
-            },
-            {
-              "opponent": "Iraq",
-              "result": "win",
-              "goals_for": 5,
-              "goals_against": 0,
-              "date": "2026-06-26"
             }
           ],
           "bonuses": []
@@ -2496,6 +2510,15 @@
       "team2": "Congo",
       "result": "home",
       "score1": 2,
+      "score2": 1,
+      "date": "2026-07-01",
+      "group": ""
+    },
+    {
+      "team1": "Belgium",
+      "team2": "Senegal",
+      "result": "away",
+      "score1": 0,
       "score2": 1,
       "date": "2026-07-01",
       "group": ""
