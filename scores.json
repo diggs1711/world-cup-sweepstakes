@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "02 Jul 2026, 21:00",
+  "lastUpdated": "02 Jul 2026, 22:00",
   "players": [
     {
       "name": "Dec W",
@@ -238,7 +238,7 @@
             {
               "opponent": "Austria",
               "result": "win",
-              "goals_for": 1,
+              "goals_for": 3,
               "goals_against": 0,
               "date": "2026-07-02"
             }
@@ -783,7 +783,7 @@
               "opponent": "Spain",
               "result": "loss",
               "goals_for": 0,
-              "goals_against": 1,
+              "goals_against": 3,
               "date": "2026-07-02"
             }
           ],
@@ -2564,7 +2564,7 @@
       "team1": "Spain",
       "team2": "Austria",
       "result": "home",
-      "score1": 1,
+      "score1": 3,
       "score2": 0,
       "date": "2026-07-02",
       "group": ""
