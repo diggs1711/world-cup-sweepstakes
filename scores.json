@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "03 Jul 2026, 20:00",
+  "lastUpdated": "03 Jul 2026, 22:00",
   "players": [
     {
       "name": "Dec W",
@@ -559,8 +559,8 @@
             {
               "opponent": "Australia",
               "result": "win",
-              "goals_for": 1,
-              "goals_against": 0,
+              "goals_for": 5,
+              "goals_against": 3,
               "date": "2026-07-03"
             }
           ],
@@ -1371,8 +1371,8 @@
             {
               "opponent": "Egypt",
               "result": "loss",
-              "goals_for": 0,
-              "goals_against": 1,
+              "goals_for": 3,
+              "goals_against": 5,
               "date": "2026-07-03"
             }
           ],
@@ -2633,8 +2633,8 @@
       "team1": "Australia",
       "team2": "Egypt",
       "result": "away",
-      "score1": 0,
-      "score2": 1,
+      "score1": 3,
+      "score2": 5,
       "date": "2026-07-03",
       "group": ""
     }
