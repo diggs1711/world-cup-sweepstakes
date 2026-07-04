@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "04 Jul 2026, 20:00",
+  "lastUpdated": "04 Jul 2026, 21:00",
   "players": [
     {
       "name": "Dec W",
@@ -126,7 +126,7 @@
             {
               "opponent": "Canada",
               "result": "win",
-              "goals_for": 2,
+              "goals_for": 3,
               "goals_against": 0,
               "date": "2026-07-04"
             }
@@ -1400,7 +1400,7 @@
               "opponent": "Morocco",
               "result": "loss",
               "goals_for": 0,
-              "goals_against": 2,
+              "goals_against": 3,
               "date": "2026-07-04"
             }
           ],
@@ -2703,7 +2703,7 @@
       "team2": "Morocco",
       "result": "away",
       "score1": 0,
-      "score2": 2,
+      "score2": 3,
       "date": "2026-07-04",
       "group": ""
     }
