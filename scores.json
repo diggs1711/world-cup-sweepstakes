@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "05 Jul 2026, 22:00",
+  "lastUpdated": "05 Jul 2026, 23:00",
   "players": [
     {
       "name": "Dec W",
@@ -395,7 +395,7 @@
     },
     {
       "name": "Sean",
-      "total": 20,
+      "total": 19,
       "teams": [
         {
           "name": "Czechia",
@@ -432,9 +432,9 @@
         {
           "name": "Norway",
           "pot": "B",
-          "points": 11,
+          "points": 10,
           "wins": 3,
-          "draws": 1,
+          "draws": 0,
           "losses": 1,
           "matches": [
             {
@@ -464,13 +464,6 @@
               "goals_for": 2,
               "goals_against": 1,
               "date": "2026-06-30"
-            },
-            {
-              "opponent": "Brazil",
-              "result": "draw",
-              "goals_for": 0,
-              "goals_against": 0,
-              "date": "2026-07-05"
             }
           ],
           "bonuses": [
@@ -1234,130 +1227,6 @@
       "rank": 10
     },
     {
-      "name": "Dave W",
-      "total": 15,
-      "teams": [
-        {
-          "name": "Iraq",
-          "pot": "C",
-          "points": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 3,
-          "matches": [
-            {
-              "opponent": "Norway",
-              "result": "loss",
-              "goals_for": 1,
-              "goals_against": 4,
-              "date": "2026-06-16"
-            },
-            {
-              "opponent": "France",
-              "result": "loss",
-              "goals_for": 0,
-              "goals_against": 3,
-              "date": "2026-06-22"
-            },
-            {
-              "opponent": "Senegal",
-              "result": "loss",
-              "goals_for": 0,
-              "goals_against": 5,
-              "date": "2026-06-26"
-            }
-          ],
-          "bonuses": []
-        },
-        {
-          "name": "Australia",
-          "pot": "B",
-          "points": 4,
-          "wins": 1,
-          "draws": 1,
-          "losses": 2,
-          "matches": [
-            {
-              "opponent": "Turkey",
-              "result": "win",
-              "goals_for": 2,
-              "goals_against": 0,
-              "date": "2026-06-14"
-            },
-            {
-              "opponent": "USA",
-              "result": "loss",
-              "goals_for": 0,
-              "goals_against": 2,
-              "date": "2026-06-19"
-            },
-            {
-              "opponent": "Paraguay",
-              "result": "draw",
-              "goals_for": 0,
-              "goals_against": 0,
-              "date": "2026-06-26"
-            },
-            {
-              "opponent": "Egypt",
-              "result": "loss",
-              "goals_for": 3,
-              "goals_against": 5,
-              "date": "2026-07-03"
-            }
-          ],
-          "bonuses": []
-        },
-        {
-          "name": "Brazil",
-          "pot": "A",
-          "points": 11,
-          "wins": 3,
-          "draws": 2,
-          "losses": 0,
-          "matches": [
-            {
-              "opponent": "Morocco",
-              "result": "draw",
-              "goals_for": 1,
-              "goals_against": 1,
-              "date": "2026-06-13"
-            },
-            {
-              "opponent": "Haiti",
-              "result": "win",
-              "goals_for": 3,
-              "goals_against": 0,
-              "date": "2026-06-20"
-            },
-            {
-              "opponent": "Scotland",
-              "result": "win",
-              "goals_for": 3,
-              "goals_against": 0,
-              "date": "2026-06-24"
-            },
-            {
-              "opponent": "Japan",
-              "result": "win",
-              "goals_for": 2,
-              "goals_against": 1,
-              "date": "2026-06-29"
-            },
-            {
-              "opponent": "Norway",
-              "result": "draw",
-              "goals_for": 0,
-              "goals_against": 0,
-              "date": "2026-07-05"
-            }
-          ],
-          "bonuses": []
-        }
-      ],
-      "rank": 11
-    },
-    {
       "name": "Dec N",
       "total": 14,
       "teams": [
@@ -1467,7 +1336,7 @@
           "bonuses": []
         }
       ],
-      "rank": 12
+      "rank": 11
     },
     {
       "name": "Sash",
@@ -1585,6 +1454,123 @@
               "result": "loss",
               "goals_for": 4,
               "goals_against": 5,
+              "date": "2026-06-29"
+            }
+          ],
+          "bonuses": []
+        }
+      ],
+      "rank": 12
+    },
+    {
+      "name": "Dave W",
+      "total": 14,
+      "teams": [
+        {
+          "name": "Iraq",
+          "pot": "C",
+          "points": 0,
+          "wins": 0,
+          "draws": 0,
+          "losses": 3,
+          "matches": [
+            {
+              "opponent": "Norway",
+              "result": "loss",
+              "goals_for": 1,
+              "goals_against": 4,
+              "date": "2026-06-16"
+            },
+            {
+              "opponent": "France",
+              "result": "loss",
+              "goals_for": 0,
+              "goals_against": 3,
+              "date": "2026-06-22"
+            },
+            {
+              "opponent": "Senegal",
+              "result": "loss",
+              "goals_for": 0,
+              "goals_against": 5,
+              "date": "2026-06-26"
+            }
+          ],
+          "bonuses": []
+        },
+        {
+          "name": "Australia",
+          "pot": "B",
+          "points": 4,
+          "wins": 1,
+          "draws": 1,
+          "losses": 2,
+          "matches": [
+            {
+              "opponent": "Turkey",
+              "result": "win",
+              "goals_for": 2,
+              "goals_against": 0,
+              "date": "2026-06-14"
+            },
+            {
+              "opponent": "USA",
+              "result": "loss",
+              "goals_for": 0,
+              "goals_against": 2,
+              "date": "2026-06-19"
+            },
+            {
+              "opponent": "Paraguay",
+              "result": "draw",
+              "goals_for": 0,
+              "goals_against": 0,
+              "date": "2026-06-26"
+            },
+            {
+              "opponent": "Egypt",
+              "result": "loss",
+              "goals_for": 3,
+              "goals_against": 5,
+              "date": "2026-07-03"
+            }
+          ],
+          "bonuses": []
+        },
+        {
+          "name": "Brazil",
+          "pot": "A",
+          "points": 10,
+          "wins": 3,
+          "draws": 1,
+          "losses": 0,
+          "matches": [
+            {
+              "opponent": "Morocco",
+              "result": "draw",
+              "goals_for": 1,
+              "goals_against": 1,
+              "date": "2026-06-13"
+            },
+            {
+              "opponent": "Haiti",
+              "result": "win",
+              "goals_for": 3,
+              "goals_against": 0,
+              "date": "2026-06-20"
+            },
+            {
+              "opponent": "Scotland",
+              "result": "win",
+              "goals_for": 3,
+              "goals_against": 0,
+              "date": "2026-06-24"
+            },
+            {
+              "opponent": "Japan",
+              "result": "win",
+              "goals_for": 2,
+              "goals_against": 1,
               "date": "2026-06-29"
             }
           ],
@@ -2742,15 +2728,6 @@
       "score1": 0,
       "score2": 1,
       "date": "2026-07-04",
-      "group": ""
-    },
-    {
-      "team1": "Brazil",
-      "team2": "Norway",
-      "result": "draw",
-      "score1": 0,
-      "score2": 0,
-      "date": "2026-07-05",
       "group": ""
     }
   ]
