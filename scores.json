@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "15 Jul 2026, 21:00",
+  "lastUpdated": "15 Jul 2026, 22:00",
   "players": [
     {
       "name": "CMD",
@@ -594,7 +594,7 @@
     },
     {
       "name": "Tadhg",
-      "total": 22,
+      "total": 24,
       "teams": [
         {
           "name": "Haiti",
@@ -663,9 +663,9 @@
         {
           "name": "Argentina",
           "pot": "A",
-          "points": 19,
-          "wins": 6,
-          "draws": 1,
+          "points": 21,
+          "wins": 7,
+          "draws": 0,
           "losses": 0,
           "matches": [
             {
@@ -712,9 +712,9 @@
             },
             {
               "opponent": "England",
-              "result": "draw",
-              "goals_for": 0,
-              "goals_against": 0,
+              "result": "win",
+              "goals_for": 2,
+              "goals_against": 1,
               "date": "2026-07-15"
             }
           ],
@@ -863,7 +863,7 @@
     },
     {
       "name": "Dec N",
-      "total": 21,
+      "total": 20,
       "teams": [
         {
           "name": "Uzbekistan",
@@ -934,10 +934,10 @@
         {
           "name": "England",
           "pot": "A",
-          "points": 17,
+          "points": 16,
           "wins": 5,
-          "draws": 2,
-          "losses": 0,
+          "draws": 1,
+          "losses": 1,
           "matches": [
             {
               "opponent": "Croatia",
@@ -983,9 +983,9 @@
             },
             {
               "opponent": "Argentina",
-              "result": "draw",
-              "goals_for": 0,
-              "goals_against": 0,
+              "result": "loss",
+              "goals_for": 1,
+              "goals_against": 2,
               "date": "2026-07-15"
             }
           ],
@@ -3003,9 +3003,9 @@
     {
       "team1": "England",
       "team2": "Argentina",
-      "result": "draw",
-      "score1": 0,
-      "score2": 0,
+      "result": "away",
+      "score1": 1,
+      "score2": 2,
       "date": "2026-07-15",
       "group": ""
     }
