@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "18 Jul 2026, 22:00",
+  "lastUpdated": "18 Jul 2026, 23:00",
   "players": [
     {
       "name": "CMD",
@@ -724,6 +724,146 @@
       "rank": 5
     },
     {
+      "name": "Dec N",
+      "total": 23,
+      "teams": [
+        {
+          "name": "Uzbekistan",
+          "pot": "C",
+          "points": 0,
+          "wins": 0,
+          "draws": 0,
+          "losses": 3,
+          "matches": [
+            {
+              "opponent": "Colombia",
+              "result": "loss",
+              "goals_for": 1,
+              "goals_against": 3,
+              "date": "2026-06-18"
+            },
+            {
+              "opponent": "Portugal",
+              "result": "loss",
+              "goals_for": 0,
+              "goals_against": 5,
+              "date": "2026-06-23"
+            },
+            {
+              "opponent": "Congo",
+              "result": "loss",
+              "goals_for": 1,
+              "goals_against": 3,
+              "date": "2026-06-27"
+            }
+          ],
+          "bonuses": []
+        },
+        {
+          "name": "Turkey",
+          "pot": "B",
+          "points": 4,
+          "wins": 1,
+          "draws": 0,
+          "losses": 2,
+          "matches": [
+            {
+              "opponent": "Australia",
+              "result": "loss",
+              "goals_for": 0,
+              "goals_against": 2,
+              "date": "2026-06-14"
+            },
+            {
+              "opponent": "Paraguay",
+              "result": "loss",
+              "goals_for": 0,
+              "goals_against": 1,
+              "date": "2026-06-20"
+            },
+            {
+              "opponent": "USA",
+              "result": "win",
+              "goals_for": 3,
+              "goals_against": 2,
+              "date": "2026-06-26"
+            }
+          ],
+          "bonuses": [
+            "+1 underdog vs USA"
+          ]
+        },
+        {
+          "name": "England",
+          "pot": "A",
+          "points": 19,
+          "wins": 6,
+          "draws": 1,
+          "losses": 1,
+          "matches": [
+            {
+              "opponent": "Croatia",
+              "result": "win",
+              "goals_for": 4,
+              "goals_against": 2,
+              "date": "2026-06-17"
+            },
+            {
+              "opponent": "Ghana",
+              "result": "draw",
+              "goals_for": 0,
+              "goals_against": 0,
+              "date": "2026-06-23"
+            },
+            {
+              "opponent": "Panama",
+              "result": "win",
+              "goals_for": 2,
+              "goals_against": 0,
+              "date": "2026-06-27"
+            },
+            {
+              "opponent": "Congo",
+              "result": "win",
+              "goals_for": 2,
+              "goals_against": 1,
+              "date": "2026-07-01"
+            },
+            {
+              "opponent": "Mexico",
+              "result": "win",
+              "goals_for": 3,
+              "goals_against": 2,
+              "date": "2026-07-06"
+            },
+            {
+              "opponent": "Norway",
+              "result": "win",
+              "goals_for": 2,
+              "goals_against": 1,
+              "date": "2026-07-11"
+            },
+            {
+              "opponent": "Argentina",
+              "result": "loss",
+              "goals_for": 1,
+              "goals_against": 2,
+              "date": "2026-07-15"
+            },
+            {
+              "opponent": "France",
+              "result": "win",
+              "goals_for": 4,
+              "goals_against": 0,
+              "date": "2026-07-18"
+            }
+          ],
+          "bonuses": []
+        }
+      ],
+      "rank": 6
+    },
+    {
       "name": "Cali",
       "total": 22,
       "teams": [
@@ -804,7 +944,7 @@
           "points": 18,
           "wins": 6,
           "draws": 0,
-          "losses": 1,
+          "losses": 2,
           "matches": [
             {
               "opponent": "Senegal",
@@ -854,139 +994,13 @@
               "goals_for": 0,
               "goals_against": 2,
               "date": "2026-07-14"
-            }
-          ],
-          "bonuses": []
-        }
-      ],
-      "rank": 6
-    },
-    {
-      "name": "Dec N",
-      "total": 20,
-      "teams": [
-        {
-          "name": "Uzbekistan",
-          "pot": "C",
-          "points": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 3,
-          "matches": [
-            {
-              "opponent": "Colombia",
-              "result": "loss",
-              "goals_for": 1,
-              "goals_against": 3,
-              "date": "2026-06-18"
             },
             {
-              "opponent": "Portugal",
+              "opponent": "England",
               "result": "loss",
               "goals_for": 0,
-              "goals_against": 5,
-              "date": "2026-06-23"
-            },
-            {
-              "opponent": "Congo",
-              "result": "loss",
-              "goals_for": 1,
-              "goals_against": 3,
-              "date": "2026-06-27"
-            }
-          ],
-          "bonuses": []
-        },
-        {
-          "name": "Turkey",
-          "pot": "B",
-          "points": 4,
-          "wins": 1,
-          "draws": 0,
-          "losses": 2,
-          "matches": [
-            {
-              "opponent": "Australia",
-              "result": "loss",
-              "goals_for": 0,
-              "goals_against": 2,
-              "date": "2026-06-14"
-            },
-            {
-              "opponent": "Paraguay",
-              "result": "loss",
-              "goals_for": 0,
-              "goals_against": 1,
-              "date": "2026-06-20"
-            },
-            {
-              "opponent": "USA",
-              "result": "win",
-              "goals_for": 3,
-              "goals_against": 2,
-              "date": "2026-06-26"
-            }
-          ],
-          "bonuses": [
-            "+1 underdog vs USA"
-          ]
-        },
-        {
-          "name": "England",
-          "pot": "A",
-          "points": 16,
-          "wins": 5,
-          "draws": 1,
-          "losses": 1,
-          "matches": [
-            {
-              "opponent": "Croatia",
-              "result": "win",
-              "goals_for": 4,
-              "goals_against": 2,
-              "date": "2026-06-17"
-            },
-            {
-              "opponent": "Ghana",
-              "result": "draw",
-              "goals_for": 0,
-              "goals_against": 0,
-              "date": "2026-06-23"
-            },
-            {
-              "opponent": "Panama",
-              "result": "win",
-              "goals_for": 2,
-              "goals_against": 0,
-              "date": "2026-06-27"
-            },
-            {
-              "opponent": "Congo",
-              "result": "win",
-              "goals_for": 2,
-              "goals_against": 1,
-              "date": "2026-07-01"
-            },
-            {
-              "opponent": "Mexico",
-              "result": "win",
-              "goals_for": 3,
-              "goals_against": 2,
-              "date": "2026-07-06"
-            },
-            {
-              "opponent": "Norway",
-              "result": "win",
-              "goals_for": 2,
-              "goals_against": 1,
-              "date": "2026-07-11"
-            },
-            {
-              "opponent": "Argentina",
-              "result": "loss",
-              "goals_for": 1,
-              "goals_against": 2,
-              "date": "2026-07-15"
+              "goals_against": 4,
+              "date": "2026-07-18"
             }
           ],
           "bonuses": []
@@ -3007,6 +3021,15 @@
       "score1": 1,
       "score2": 2,
       "date": "2026-07-15",
+      "group": ""
+    },
+    {
+      "team1": "France",
+      "team2": "England",
+      "result": "away",
+      "score1": 0,
+      "score2": 4,
+      "date": "2026-07-18",
       "group": ""
     }
   ]
