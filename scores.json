@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "19 Jul 2026, 20:00",
+  "lastUpdated": "19 Jul 2026, 21:00",
   "players": [
     {
       "name": "CMD",
-      "total": 30,
+      "total": 31,
       "teams": [
         {
           "name": "Ghana",
@@ -88,9 +88,9 @@
         {
           "name": "Spain",
           "pot": "A",
-          "points": 19,
+          "points": 20,
           "wins": 6,
-          "draws": 1,
+          "draws": 2,
           "losses": 0,
           "matches": [
             {
@@ -141,6 +141,13 @@
               "goals_for": 2,
               "goals_against": 0,
               "date": "2026-07-14"
+            },
+            {
+              "opponent": "Argentina",
+              "result": "draw",
+              "goals_for": 0,
+              "goals_against": 0,
+              "date": "2026-07-19"
             }
           ],
           "bonuses": []
@@ -594,7 +601,7 @@
     },
     {
       "name": "Tadhg",
-      "total": 24,
+      "total": 25,
       "teams": [
         {
           "name": "Haiti",
@@ -663,9 +670,9 @@
         {
           "name": "Argentina",
           "pot": "A",
-          "points": 21,
+          "points": 22,
           "wins": 7,
-          "draws": 0,
+          "draws": 1,
           "losses": 0,
           "matches": [
             {
@@ -716,6 +723,13 @@
               "goals_for": 2,
               "goals_against": 1,
               "date": "2026-07-15"
+            },
+            {
+              "opponent": "Spain",
+              "result": "draw",
+              "goals_for": 0,
+              "goals_against": 0,
+              "date": "2026-07-19"
             }
           ],
           "bonuses": []
@@ -3030,6 +3044,15 @@
       "score1": 4,
       "score2": 6,
       "date": "2026-07-18",
+      "group": ""
+    },
+    {
+      "team1": "Spain",
+      "team2": "Argentina",
+      "result": "draw",
+      "score1": 0,
+      "score2": 0,
+      "date": "2026-07-19",
       "group": ""
     }
   ]
