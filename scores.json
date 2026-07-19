@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "18 Jul 2026, 23:00",
+  "lastUpdated": "19 Jul 2026, 07:00",
   "players": [
     {
       "name": "CMD",
@@ -853,8 +853,8 @@
             {
               "opponent": "France",
               "result": "win",
-              "goals_for": 4,
-              "goals_against": 0,
+              "goals_for": 6,
+              "goals_against": 4,
               "date": "2026-07-18"
             }
           ],
@@ -998,8 +998,8 @@
             {
               "opponent": "England",
               "result": "loss",
-              "goals_for": 0,
-              "goals_against": 4,
+              "goals_for": 4,
+              "goals_against": 6,
               "date": "2026-07-18"
             }
           ],
@@ -3027,8 +3027,8 @@
       "team1": "France",
       "team2": "England",
       "result": "away",
-      "score1": 0,
-      "score2": 4,
+      "score1": 4,
+      "score2": 6,
       "date": "2026-07-18",
       "group": ""
     }
